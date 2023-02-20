@@ -2,15 +2,20 @@
     {
       "data": {
         "id": "Concept/Binärzahlen",
-        "label": "Binärzahlen"
+        "label": "Binärzahlen",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Zahlensysteme",
-        "label": "Zahlensysteme"
+        "label": "Zahlensysteme",
+        "parent": "VL1"
       }
     },
+
+    { "data": {"id": "VL1"} },
+    
     {
       "data": {
         "id": "Concept/Dezimalsystem",
