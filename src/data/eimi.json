@@ -1,4 +1,11 @@
 [
+    { "data": {"id": "VL1", "parentcolor": "#d7e58c"}, "classes": "parent" },
+    { "data": {"id": "VL2", "parentcolor": "#8ed1fc"}, "classes": "parent" },
+    { "data": {"id": "VL3", "parentcolor": "#ffc107"}, "classes": "parent" },
+    { "data": {"id": "VL4", "parentcolor": "#e79d98"}, "classes": "parent" },
+    { "data": {"id": "VL5", "parentcolor": "#d3b3e5"}, "classes": "parent" },
+    { "data": {"id": "VL6", "parentcolor": "#b3e5d1"}, "classes": "parent" },
+    { "data": {"id": "VL7", "parentcolor": "#e5bfb3"}, "classes": "parent" },
     {
       "data": {
         "id": "Concept/Binärzahlen",
@@ -13,517 +20,600 @@
         "parent": "VL1"
       }
     },
-
-    { "data": {"id": "VL1"} },
-    
     {
       "data": {
         "id": "Concept/Dezimalsystem",
-        "label": "Dezimalsystem"
+        "label": "Dezimalsystem",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/natürliche_Zahlen",
-        "label": "natürliche Zahlen"
+        "label": "natürliche Zahlen",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Multiplikation",
-        "label": "Multiplikation"
+        "label": "Multiplikation",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Addition",
-        "label": "Addition"
+        "label": "Addition",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/_elektrische_Spannung_",
-        "label": "(elektrische Spannung)"
+        "label": "(elektrische Spannung)",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Hexadezimalzahlen",
-        "label": "Hexadezimalzahlen"
+        "label": "Hexadezimalzahlen",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Binärzahlen_mit_Nachkommastellen",
-        "label": "Binärzahlen mit Nachkommastellen"
+        "label": "Binärzahlen mit Nachkommastellen",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Addition_von_Binärzahlen",
-        "label": "Addition von Binärzahlen"
+        "label": "Addition von Binärzahlen",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Zweierkomplementdarstellung",
-        "label": "Zweierkomplementdarstellung"
+        "label": "Zweierkomplementdarstellung",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Subtraktion_von_Binärzahlen",
-        "label": "Subtraktion von Binärzahlen"
+        "label": "Subtraktion von Binärzahlen",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Rechenregeln_im_Binärsystem",
-        "label": "Rechenregeln im Binärsystem"
+        "label": "Rechenregeln im Binärsystem",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Division",
-        "label": "Division"
+        "label": "Division",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Subtraktion",
-        "label": "Subtraktion"
+        "label": "Subtraktion",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Bitweise_Operatoren",
-        "label": "Bitweise Operatoren"
+        "label": "Bitweise Operatoren",
+        "parent": "VL1"
       }
     },
     {
       "data": {
         "id": "Concept/Boolesche_Operatoren",
-        "label": "Boolesche Operatoren"
+        "label": "Boolesche Operatoren",
+        "parent": "VL1"
       }
     },
+
     {
       "data": {
         "id": "Concept/Semiotik",
-        "label": "Semiotik"
+        "label": "Semiotik",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Zeichenvorrat",
-        "label": "Zeichenvorrat"
+        "label": "Zeichenvorrat",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Codierung",
-        "label": "Codierung"
+        "label": "Codierung",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Binärcodierung",
-        "label": "Binärcodierung"
+        "label": "Binärcodierung",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/RAM_und_HDD",
-        "label": "RAM und HDD"
+        "label": "RAM und HDD",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Bits",
-        "label": "Bits"
+        "label": "Bits",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Bytes",
-        "label": "Bytes"
+        "label": "Bytes",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/_Hexadezimalzahlen_",
-        "label": "(Hexadezimalzahlen)"
+        "label": "(Hexadezimalzahlen)",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Weitere_Größeneinheiten",
-        "label": "Weitere Größeneinheiten"
+        "label": "Weitere Größeneinheiten",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Datentypen",
-        "label": "Datentypen"
+        "label": "Datentypen",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Speicherreihenfolge",
-        "label": "Speicherreihenfolge"
+        "label": "Speicherreihenfolge",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Overflow",
-        "label": "Overflow"
+        "label": "Overflow",
+        "parent": "VL2"
       }
     },
     {
       "data": {
         "id": "Concept/Endianness",
-        "label": "Endianness"
+        "label": "Endianness",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Vorzeichen_Bit",
-        "label": "Vorzeichen-Bit"
+        "label": "Vorzeichen-Bit",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Binäre_Festkommazahlen",
-        "label": "Binäre Festkommazahlen"
+        "label": "Binäre Festkommazahlen",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Binäre_Gleitkommazahlen",
-        "label": "Binäre Gleitkommazahlen"
+        "label": "Binäre Gleitkommazahlen",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Rundungsfehler",
-        "label": "Rundungsfehler"
+        "label": "Rundungsfehler",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Zeilenumbrüche",
-        "label": "Zeilenumbrüche"
+        "label": "Zeilenumbrüche",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Morse_Code",
-        "label": "Morse-Code"
+        "label": "Morse-Code",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Baudot_Code",
-        "label": "Baudot-Code"
+        "label": "Baudot-Code",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/ASCII",
-        "label": "ASCII"
+        "label": "ASCII",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/ISO_8859",
-        "label": "ISO-8859"
+        "label": "ISO-8859",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/_ASCII_",
-        "label": "(ASCII)"
+        "label": "(ASCII)",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Unicode",
-        "label": "Unicode"
+        "label": "Unicode",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Hex_Editor",
-        "label": "Hex-Editor"
+        "label": "Hex-Editor",
+        "parent": "VL3"
       }
     },
     {
       "data": {
         "id": "Concept/Anzeige_einer_Textdatei_durch_Texteditor",
-        "label": "Anzeige einer Textdatei durch Texteditor"
+        "label": "Anzeige einer Textdatei durch Texteditor",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/UTF_32",
-        "label": "UTF-32"
+        "label": "UTF-32",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/UTF_16",
-        "label": "UTF-16"
+        "label": "UTF-16",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/BOM",
-        "label": "BOM"
+        "label": "BOM",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/UTF_8",
-        "label": "UTF-8"
+        "label": "UTF-8",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/Codierung_von_Unicode_Codepoints_in_UTF_8",
-        "label": "Codierung von Unicode-Codepoints in UTF-8"
+        "label": "Codierung von Unicode-Codepoints in UTF-8",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/Datei",
-        "label": "Datei"
+        "label": "Datei",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/Plain_Text_Dateiformate",
-        "label": "Plain-Text-Dateiformate"
+        "label": "Plain-Text-Dateiformate",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/Markupsprachen",
-        "label": "Markupsprachen"
+        "label": "Markupsprachen",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/XML",
-        "label": "XML"
+        "label": "XML",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/Binäre_Dateiformate",
-        "label": "Binäre Dateiformate"
+        "label": "Binäre Dateiformate",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/Vergleich_von_Plain_Text_und_Binär",
-        "label": "Vergleich von Plain-Text und Binär"
+        "label": "Vergleich von Plain-Text und Binär",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/IFF",
-        "label": "IFF"
+        "label": "IFF",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/ZIP",
-        "label": "ZIP"
+        "label": "ZIP",
+        "parent": "VL4"
       }
     },
     {
       "data": {
         "id": "Concept/A_Mathematical_Theory_of_Communication",
-        "label": "A Mathematical Theory of Communication"
+        "label": "A Mathematical Theory of Communication",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Arten_von_Fehlern",
-        "label": "Arten von Fehlern"
+        "label": "Arten von Fehlern",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Luhn_Algorithmus",
-        "label": "Luhn-Algorithmus"
+        "label": "Luhn-Algorithmus",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/ISBN",
-        "label": "ISBN"
+        "label": "ISBN",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Fehler_bei_Binärcodierung",
-        "label": "Fehler bei Binärcodierung"
+        "label": "Fehler bei Binärcodierung",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Wiederholungen",
-        "label": "Wiederholungen"
+        "label": "Wiederholungen",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Parität",
-        "label": "Parität"
+        "label": "Parität",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Hamming_Distanz",
-        "label": "Hamming-Distanz"
+        "label": "Hamming-Distanz",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Redundanz_nach_Hamming",
-        "label": "Redundanz nach Hamming"
+        "label": "Redundanz nach Hamming",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Fehlerkorrigierende_Codes",
-        "label": "Fehlerkorrigierende Codes"
+        "label": "Fehlerkorrigierende Codes",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Hamming_Code",
-        "label": "Hamming-Code"
+        "label": "Hamming-Code",
+        "parent": "VL5"
       }
     },
     {
       "data": {
         "id": "Concept/Effiziente_Codierung",
-        "label": "Effiziente Codierung"
+        "label": "Effiziente Codierung",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Codierung_mit_Code_Tabelle",
-        "label": "Codierung mit Code-Tabelle"
+        "label": "Codierung mit Code-Tabelle",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Entropiecodierung",
-        "label": "Entropiecodierung"
+        "label": "Entropiecodierung",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Präfixcode",
-        "label": "Präfixcode"
+        "label": "Präfixcode",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Informationsgehalt",
-        "label": "Informationsgehalt"
+        "label": "Informationsgehalt",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Redundanz",
-        "label": "Redundanz"
+        "label": "Redundanz",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Entropie",
-        "label": "Entropie "
+        "label": "Entropie ",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Logarithmus",
-        "label": "Logarithmus"
+        "label": "Logarithmus",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Vergleich_von_Kompression_und_Fehlerkorrektur",
-        "label": "Vergleich von Kompression und Fehlerkorrektur"
+        "label": "Vergleich von Kompression und Fehlerkorrektur",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Huffman_Codierung",
-        "label": "Huffman-Codierung"
+        "label": "Huffman-Codierung",
+        "parent": "VL6"
       }
     },
     {
       "data": {
         "id": "Concept/Übersicht_Kompressionsverfahren",
-        "label": "Übersicht Kompressionsverfahren"
+        "label": "Übersicht Kompressionsverfahren",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/Kolmogorow_Komplexität",
-        "label": "Kolmogorow-Komplexität"
+        "label": "Kolmogorow-Komplexität",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/Algorithmische_Tiefe",
-        "label": "Algorithmische Tiefe"
+        "label": "Algorithmische Tiefe",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/Arithmetische_Codierung",
-        "label": "Arithmetische Codierung"
+        "label": "Arithmetische Codierung",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/Run_Length_Encoding",
-        "label": "Run Length Encoding"
+        "label": "Run Length Encoding",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/LZ77",
-        "label": "LZ77"
+        "label": "LZ77",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/LZW_Komprimierung",
-        "label": "LZW-Komprimierung"
+        "label": "LZW-Komprimierung",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/Decodierung_mit_LZW",
-        "label": "Decodierung mit LZW"
+        "label": "Decodierung mit LZW",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/Vergleich_der_Kompressionsverfahren",
-        "label": "Vergleich der Kompressionsverfahren"
+        "label": "Vergleich der Kompressionsverfahren",
+        "parent": "VL7"
       }
     },
     {
       "data": {
         "id": "Concept/Aufbau_einer_ZIP_Datei",
-        "label": "Aufbau einer ZIP-Datei"
+        "label": "Aufbau einer ZIP-Datei",
+        "parent": "VL7"
       }
     },
     {

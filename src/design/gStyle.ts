@@ -8,16 +8,29 @@ export default [
             'label': 'data(label)',
             'text-wrap': 'wrap',
             'text-max-width': '100',
-            'events': 'yes' // Events can occur on element (defaul: yes)
+            'border-color': "#666",
         }
     },
     // grabbed NODE (https://js.cytoscape.org/#selectors/state)
     { selector: ":grabbed", 
         style: { 
-            'background-color': 'blue'
+            'background-color': 'blue',
         }
 
     }, // Mappers (https://js.cytoscape.org/#style/mappers)
+    { selector: ":selected", 
+        style: { 
+            'background-color': 'blue',
+        }
+
+    },
+
+    // Highlight class
+    { selector: '.hightlight',
+        style: {
+            'background-color': 'red',
+        }
+    },
 
     //PARENT 
     // -> needs own data-object in json-file: {"data": {"id:" "parentID"}}
@@ -26,7 +39,18 @@ export default [
             'label': 'data(id)',
             'text-valign': 'top',
             'text-halign': 'center',
-            'background-color': "green"
+            'border-color': 'black',
+            'background-color': 'data(parentcolor)',
+            //'display': 'inline-flex', //??
+            // https://developer.mozilla.org/en-US/docs/Web/CSS/display
+            // mit anderen Layout testen
+        }
+    },
+    //Collapsing all child nodes to one parent
+    { selector: '.collapsed-child',
+        style: {
+            //'opacity': '0',
+            'display': 'none'
         }
     },
 
@@ -39,5 +63,17 @@ export default [
             'target-arrow-shape': 'triangle',
             'curve-style': 'bezier'
         }
-    }   
+    }, 
+    { selector: '.highlight-edge',
+        style: {
+            'line-color': 'red',
+            'target-arrow-color': 'red',
+        }
+    }, 
+    { selector: '.unhighlight-edge',
+        style: {
+            'line-color': '#ccc',
+            'target-arrow-color': '#ccc',
+        }
+    },   
 ]
