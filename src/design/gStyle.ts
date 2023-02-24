@@ -2,13 +2,17 @@
 // Besser als json?
 export default [
     // NODE
+    //'.group',
     { selector: "node",
         style: { // Show node with label
-            'background-color': '#666',
+            //'background-color': 'inherit', from parent
+            //'backgroud-blacken': '-0.5',
             'label': 'data(label)',
             'text-wrap': 'wrap',
             'text-max-width': '100',
             'border-color': "#666",
+            //'position': 'parent',
+            //'background-opacity': 0.7
         }
     },
     // grabbed NODE (https://js.cytoscape.org/#selectors/state)
@@ -31,21 +35,6 @@ export default [
             'background-color': 'red',
         }
     },
-
-    //PARENT 
-    // -> needs own data-object in json-file: {"data": {"id:" "parentID"}}
-    { selector: ":parent",
-        style: {
-            'label': 'data(id)',
-            'text-valign': 'top',
-            'text-halign': 'center',
-            'border-color': 'black',
-            'background-color': 'data(parentcolor)',
-            //'display': 'inline-flex', //??
-            // https://developer.mozilla.org/en-US/docs/Web/CSS/display
-            // mit anderen Layout testen
-        }
-    },
     //Collapsing all child nodes to one parent
     { selector: '.collapsed-child',
         style: {
@@ -54,10 +43,28 @@ export default [
         }
     },
 
+    //PARENT 
+    // -> needs own data-object in json-file: {"data": {"id:" "parentID"}}
+    { selector: ":parent",
+        style: {
+            'label': 'data(id)',
+            'text-valign': 'top',
+            'text-halign': 'center',
+            'background-color': 'data(parentcolor)',
+            'shape': 'roundrectangle',
+            'border-opacity': '0',
+            'compound-sizing-wrt-labels': 'include',
+            'background-opacity': '0.7'
+            //'display': 'inline-flex', //??
+            // https://developer.mozilla.org/en-US/docs/Web/CSS/display
+            // mit anderen Layout testen
+        }
+    },
+
     // EDGE
     { selector: 'edge',
         style: {
-            'width': 3,
+            'width': 4,
             'line-color': '#ccc',
             'target-arrow-color': '#ccc',
             'target-arrow-shape': 'triangle',
