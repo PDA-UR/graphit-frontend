@@ -1,6 +1,7 @@
 import "./style.css";
 import cytoscape from "cytoscape";
 import fcose from "cytoscape-fcose";
+//import expandCollapse from "cytoscape-expand-collapse";
 // Test-Lib for expanding/collapsing nodes
 // source: https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse
 
@@ -11,6 +12,7 @@ import gStyle from "./design/gStyle";
 
 // Register extensions
 cytoscape.use(fcose);
+//expandCollapse(cytoscape);
 
 const app = document.getElementById("app");
 
@@ -60,10 +62,19 @@ cy.bind("click", e => {
         }
         // evtl. show collapse/expand button
     // Highlight Edges
-    } else if(el.isNode()){
+    } else if(el.isNode()) {
+        //Toggle multiple classes at once?
         // Highlight only edges from currently selected node
-        cy.elements().edges().toggleClass("highlight-edge", false);
-        el.connectedEdges().edges().toggleClass("highlight-edge", true);
+        cy.elements().edges().toggleClass("highlight-edge-out", false);
+        cy.elements().edges().toggleClass("highlight-edge-in", false);
+        cy.elements().nodes().toggleClass("highlight-node-out", false);
+        cy.elements().nodes().toggleClass("highlight-node-in", false);
+        //HIGHLIGHT EDGES
+        el.outgoers().edges().toggleClass("highlight-edge-out", true);
+        el.incomers().edges().toggleClass("highlight-edge-in", true);
+       //HIGHLIGHT NODES
+        el.outgoers().nodes().toggleClass("highlight-node-out", true);
+        el.incomers().nodes().toggleClass("highlight-node-in", true);
     }
 })
 // @TODO: test extension expand-collapse
@@ -79,6 +90,9 @@ btns.addEventListener("click", e => {
             break;
         case "concentricL":
             cy.layout(gLayout.concOptions).run();
+            break;
+        case "concentricL2":
+            cy.layout(gLayout.concOptions2).run();
             break;
         case "breadthfirstL":
             cy.layout(gLayout.breadthOptions).run();

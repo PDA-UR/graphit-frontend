@@ -14,14 +14,32 @@ export const fcoseOptions = {
     // packComponents: true, // needs: layout-utilities (test)
 };
 
+// Needs el: "level" in json-object
 export const concOptions = {
     name: 'concentric',
     fit: true,
-    minNodeSpacing: 10,
+    minNodeSpacing: 60,
     avoidOverlap: true,
-    nodeDimensionsIncludeLabels: true,
-
+    nodeDimensionsIncludeLabels: false,
+    concentric: function(node){
+        return node.parent().data("level");
+        //return node.data("parent");
+    },
+    levelWidth: function(nodes){ 
+        return nodes.maxDegree() / 10;
+    },
 };
+
+export const concOptions2 = {
+    name: 'concentric',
+    fit: true,
+    minNodeSpacing: 50,
+    avoidOverlap: true,
+    nodeDimensionsIncludeLabels: false,
+    concentric: function(node){
+        return node.data("parent");
+    },
+}
 
 export const breadthOptions = {
     name: "breadthfirst",
@@ -30,20 +48,6 @@ export const breadthOptions = {
     avoidOverlap: true,
     spacingFactor: 0.6,
 };
-
-/*export default [
-    //LAYOUT
-    {
-        name: "grid",
-        rows: 5,
-        nodeDimensionsIncludeLabels: true, // Includes label in node bounding boxes
-        //spacingFactor: 1.50, // pos = more space btw nodes
-        avoidOverlap2: true
-    }
-    // Interesting layouts: "cose", "breadthfirst", "random", "circle", "concentric"
-    // Prolems: Lables may overlap
-    // Extensions: Cola.js (physics), avsdf (min. edge cross)
-]*/
 
 // Run multiple layouts within one layout: 
 //https://stackoverflow.com/questions/52200858/cytoscape-js-multiple-layouts-different-layout-within-compound-nodes

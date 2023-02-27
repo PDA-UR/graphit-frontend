@@ -2,23 +2,18 @@
 // Besser als json?
 export default [
     // NODE
-    //'.group',
     { selector: "node",
         style: { // Show node with label
-            //'background-color': 'inherit', from parent
-            //'backgroud-blacken': '-0.5',
             'label': 'data(label)',
             'text-wrap': 'wrap',
             'text-max-width': '100',
             'border-color': "#666",
-            //'position': 'parent',
-            //'background-opacity': 0.7
         }
     },
     // grabbed NODE (https://js.cytoscape.org/#selectors/state)
     { selector: ":grabbed", 
         style: { 
-            'background-color': 'blue',
+            'background-color': 'red',
         }
 
     }, // Mappers (https://js.cytoscape.org/#style/mappers)
@@ -26,15 +21,9 @@ export default [
         style: { 
             'background-color': 'blue',
         }
-
     },
 
-    // Highlight class
-    { selector: '.hightlight',
-        style: {
-            'background-color': 'red',
-        }
-    },
+
     //Collapsing all child nodes to one parent
     { selector: '.collapsed-child',
         style: {
@@ -55,9 +44,6 @@ export default [
             'border-opacity': '0',
             'compound-sizing-wrt-labels': 'include',
             'background-opacity': '0.7'
-            //'display': 'inline-flex', //??
-            // https://developer.mozilla.org/en-US/docs/Web/CSS/display
-            // mit anderen Layout testen
         }
     },
 
@@ -71,16 +57,40 @@ export default [
             'curve-style': 'bezier'
         }
     }, 
-    { selector: '.highlight-edge',
+
+    // Highlight class
+    { selector: '.highlight-node-out',
+        style: {
+            'background-color': '#fc6262',
+            //light-red
+        }
+    },
+    { selector: '.highlight-node-in',
+        style: {
+            'background-color': '#5d5dfc',
+            //light-blue
+        }
+    },
+
+    { selector: '.highlight-edge-out',
         style: {
             'line-color': 'red',
             'target-arrow-color': 'red',
+            'width': 5,
+            'z-compound-depth': 'top',
         }
     }, 
-    { selector: '.unhighlight-edge',
+    { selector: '.highlight-edge-in',
+        style: {
+            'line-color': 'blue',
+            'target-arrow-color': 'blue',
+        }
+    }, 
+    
+    /*{ selector: '.unhighlight-edge',
         style: {
             'line-color': '#ccc',
             'target-arrow-color': '#ccc',
         }
-    },   
+    },  */ 
 ]
