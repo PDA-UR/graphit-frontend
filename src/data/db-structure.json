@@ -1,0 +1,27 @@
+{
+	"nodeLabels": [["Concept"]],
+	"edgeLabels": ["REQUIRES"],
+	"exampleNodes": [
+		{
+			"label": ["Concept"],
+			"node": {
+				"id": 122,
+				"labels": ["Concept"],
+				"properties": {
+					"name": "Morse-Code"
+				}
+			}
+		}
+	],
+	"exampleEdges": [
+		{
+			"label": "REQUIRES",
+			"edge": {
+				"id": 163,
+				"type": "REQUIRES",
+				"source": 94,
+				"target": 87
+			}
+		}
+	]
+}
