@@ -48,6 +48,7 @@ aiSendButton.addEventListener("click", () => {
 	});
 	getAiResponse(aiInputValue).then((response) => {
 		const r = response.data.choices[0].message?.content;
+		console.log(r);
 		if (r !== undefined) {
 			messages.push({
 				role: "assistant",
