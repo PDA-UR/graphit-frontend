@@ -1,8 +1,7 @@
 import "./style.css";
 import cytoscape from "cytoscape";
 import fcose from "cytoscape-fcose";
-//import expandCollapse from "cytoscape-expand-collapse";
-// Test-Lib for expanding/collapsing nodes
+import expandCollapse from "cytoscape-expand-collapse";
 // source: https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse
 
 // import out.json from public folder
@@ -12,7 +11,8 @@ import gStyle from "./design/gStyle";
 
 // Register extensions
 cytoscape.use(fcose);
-//expandCollapse(cytoscape);
+expandCollapse(cytoscape);
+
 
 const app = document.getElementById("app");
 
@@ -43,26 +43,48 @@ var cy = cytoscape ({
 
 });
 
+
+// Init Expand/Collapse
+//EDGES DON'T WORK + Highlights all edges/nodes on expand
+var api = cy.expandCollapse({
+    layoutBy: { // to rearange into after expand/collapse
+      name: "fcose",
+      animate: true,
+      animationDuration: 500,
+      randomize: false,
+      fit: true
+    },
+    fisheye: true,
+    undoable: false,
+    groupEdgesOfSameTypeOnCollapse: true,
+    allowNestedEdgeCollapse: true,
+    //groupEdgesOfSameTypeOnCollapse : true, // does not work yet
+    // groups by type -> contained in .json-object "type": "VL1"
+});
+
+// TEST - for edges to collapse after nodes is collapsed
+// DOESN'T WORK
+cy.nodes().on("expandcollapse.aftercollapse", function(event) { 
+    const node = this;
+    console.log("collapsed: " + node.id());
+    node.addClass("collapsedNode");
+    //let edges = node.connectedEdges();
+    //console.log(edges);
+    // Doesn't work bc. edges connect to more then one node
+    /*if(edges.length >= 2){ // More than 2 edges go out of node
+        api.collapseEdges(edges, {
+            groupEdgesOfSameTypeOnCollapse: true,
+            allowNestedEdgeCollapse: true,
+        });
+    }*/
+});
+
+
 //Expand/Collapse Parent + highight edges
 cy.unbind("click");
 cy.bind("click", e => {
     var el = e.target;
-    // Collapse/Expand Parent (NO EDGE)
-    // Evtl. move childs to parent-pos. (eles.move()) + have opacity:0
-    if(el.isNode() && el.hasClass("parent")){
-        console.log("is parent");
-        // Check if children are collapsed
-        // Evtl: add collapse/expand button
-        if(el.descendants().hasClass("collapsed-child")){
-            console.log("is collapsed");
-            e.target.descendants().removeClass('collapsed-child');
-        } else {
-            console.log("is expanded");
-            el.descendants().addClass('collapsed-child');
-        }
-        // evtl. show collapse/expand button
-    // Highlight Edges
-    } else if(el.isNode()) {
+    if(el.isNode()) {
         //Toggle multiple classes at once?
         // Highlight only edges from currently selected node
         cy.elements().edges().toggleClass("highlight-edge-out", false);
@@ -76,8 +98,7 @@ cy.bind("click", e => {
         el.outgoers().nodes().toggleClass("highlight-node-out", true);
         el.incomers().nodes().toggleClass("highlight-node-in", true);
     }
-})
-// @TODO: test extension expand-collapse
+});
 
 
 // Switch between different layouts
@@ -97,7 +118,66 @@ btns.addEventListener("click", e => {
         case "breadthfirstL":
             cy.layout(gLayout.breadthOptions).run();
             break;
+        //TEST -> only works if all edges between only two nodes
+        //Collapse selected Edges
+        case "collapseEdges":
+            const edges = cy.edges(":selected");
+            if(edges.length >= 2){
+                api.collapseEdges(edges, {
+                    groupEdgesOfSameTypeOnCollapse: true,
+                    allowNestedEdgeCollapse: true,
+                });
+            }
+            break;
         default:
             console.log("no Button");
+    }
+});
+
+
+// Navigate to searched Node
+var searchBtn = document.getElementById("searchBtn");
+searchBtn?.addEventListener("click", function(){
+    let search = document.getElementById("searchNode").value;
+    if(!search){
+        console.log("nothing entered");
+        return;
+    }
+    let filter = cy.filter("node[label = '" + search + "']");
+    let ele = cy.getElementById(filter.id());
+    if(ele.id() == undefined){
+        console.log("Node doesn't exist");
+        return;
+    }
+    // zoom to position of node
+    cy.zoom({
+        level: 1.5,
+        position: ele.position(),
+    });
+    ele.flashClass("searched", 2000); // hightlight node for 2000ms
+});
+
+//TEST: Mouse-over (hover) event:
+cy.on('mouseover', 'node', e => {
+    var node = e.target;
+    console.log("Mouse on node" + node.data('label'));
+});
+
+
+// TEST for add node -> right click on Background
+cy.on('cxttap', e => {
+    if (e.target === cy){
+        console.log("right clicked bg");
+        //Adds one node to graph
+        var label:String = "TEST";
+        // Needs same format as other data
+        cy.add([
+            { group: 'nodes', data: { id: 't0', label: "test1", parent : "VL1" } },
+            { group: 'nodes', data: { id: 't1', label: "test2", parent : "VL1" } },
+            { group: 'edges', data: { id: 'te0', source: 't0', target: 't1' } }
+          ]);
+        // Run layout again
+    } else {
+        console.log("right clicked " + e.target.id());
     }
 });

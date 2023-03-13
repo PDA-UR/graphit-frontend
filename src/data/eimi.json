@@ -1,11 +1,11 @@
 [
-    { "data": {"id": "VL1", "parentcolor": "#d7e58c", "level": "1"}, "classes": "parent" },
-    { "data": {"id": "VL2", "parentcolor": "#8ed1fc", "level": "2"}, "classes": "parent" },
-    { "data": {"id": "VL3", "parentcolor": "#ffc107", "level": "3"}, "classes": "parent" },
-    { "data": {"id": "VL4", "parentcolor": "#e79d98", "level": "4"}, "classes": "parent" },
-    { "data": {"id": "VL5", "parentcolor": "#d3b3e5", "level": "5"}, "classes": "parent" },
-    { "data": {"id": "VL6", "parentcolor": "#b3e5d1", "level": "6"}, "classes": "parent" },
-    { "data": {"id": "VL7", "parentcolor": "#e5bfb3", "level": "7"}, "classes": "parent" },
+    { "data": {"id": "VL1", "label": "VL1", "parentcolor": "#d7e58c", "level": "1"}, "classes": "parent" },
+    { "data": {"id": "VL2", "label": "VL2", "parentcolor": "#8ed1fc", "level": "2"}, "classes": "parent" },
+    { "data": {"id": "VL3", "label": "VL3", "parentcolor": "#ffc107", "level": "3"}, "classes": "parent" },
+    { "data": {"id": "VL4", "label": "VL4", "parentcolor": "#e79d98", "level": "4"}, "classes": "parent" },
+    { "data": {"id": "VL5", "label": "VL5", "parentcolor": "#d3b3e5", "level": "5"}, "classes": "parent" },
+    { "data": {"id": "VL6", "label": "VL6", "parentcolor": "#b3e5d1", "level": "6"}, "classes": "parent" },
+    { "data": {"id": "VL7", "label": "VL7", "parentcolor": "#e5bfb3", "level": "7"}, "classes": "parent" },
     {
       "data": {
         "id": "Concept/Binärzahlen",
@@ -620,176 +620,226 @@
       "data": {
         "id": "Concept/Binärzahlen-Concept/Zahlensysteme",
         "source": "Concept/Binärzahlen",
-        "target": "Concept/Zahlensysteme"
-      }
+        "target": "Concept/Zahlensysteme",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Binärzahlen-Concept/Dezimalsystem",
         "source": "Concept/Binärzahlen",
-        "target": "Concept/Dezimalsystem"
-      }
+        "target": "Concept/Dezimalsystem",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Zahlensysteme-Concept/natürliche_Zahlen",
         "source": "Concept/Zahlensysteme",
-        "target": "Concept/natürliche_Zahlen"
-      }
+        "target": "Concept/natürliche_Zahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Zahlensysteme-Concept/Multiplikation",
         "source": "Concept/Zahlensysteme",
-        "target": "Concept/Multiplikation"
-      }
+        "target": "Concept/Multiplikation",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Zahlensysteme-Concept/Addition",
         "source": "Concept/Zahlensysteme",
-        "target": "Concept/Addition"
-      }
+        "target": "Concept/Addition",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Multiplikation-Concept/Addition",
         "source": "Concept/Multiplikation",
-        "target": "Concept/Addition"
-      }
+        "target": "Concept/Addition",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Binärzahlen-Concept/_elektrische_Spannung_",
         "source": "Concept/Binärzahlen",
-        "target": "Concept/_elektrische_Spannung_"
-      }
+        "target": "Concept/_elektrische_Spannung_",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Hexadezimalzahlen-Concept/Zahlensysteme",
         "source": "Concept/Hexadezimalzahlen",
-        "target": "Concept/Zahlensysteme"
-      }
+        "target": "Concept/Zahlensysteme",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Hexadezimalzahlen-Concept/Binärzahlen",
         "source": "Concept/Hexadezimalzahlen",
-        "target": "Concept/Binärzahlen"
-      }
+        "target": "Concept/Binärzahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Binärzahlen_mit_Nachkommastellen-Concept/Binärzahlen",
         "source": "Concept/Binärzahlen_mit_Nachkommastellen",
-        "target": "Concept/Binärzahlen"
-      }
+        "target": "Concept/Binärzahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Addition_von_Binärzahlen-Concept/Binärzahlen",
         "source": "Concept/Addition_von_Binärzahlen",
-        "target": "Concept/Binärzahlen"
-      }
+        "target": "Concept/Binärzahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Addition_von_Binärzahlen-Concept/Addition",
         "source": "Concept/Addition_von_Binärzahlen",
-        "target": "Concept/Addition"
-      }
+        "target": "Concept/Addition",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Zweierkomplementdarstellung-Concept/Addition_von_Binärzahlen",
         "source": "Concept/Zweierkomplementdarstellung",
-        "target": "Concept/Addition_von_Binärzahlen"
-      }
+        "target": "Concept/Addition_von_Binärzahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Subtraktion_von_Binärzahlen-Concept/Zweierkomplementdarstellung",
         "source": "Concept/Subtraktion_von_Binärzahlen",
-        "target": "Concept/Zweierkomplementdarstellung"
-      }
+        "target": "Concept/Zweierkomplementdarstellung",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Rechenregeln_im_Binärsystem-Concept/Binärzahlen",
         "source": "Concept/Rechenregeln_im_Binärsystem",
-        "target": "Concept/Binärzahlen"
-      }
+        "target": "Concept/Binärzahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Rechenregeln_im_Binärsystem-Concept/Addition",
         "source": "Concept/Rechenregeln_im_Binärsystem",
-        "target": "Concept/Addition"
-      }
+        "target": "Concept/Addition",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Rechenregeln_im_Binärsystem-Concept/Multiplikation",
         "source": "Concept/Rechenregeln_im_Binärsystem",
-        "target": "Concept/Multiplikation"
-      }
+        "target": "Concept/Multiplikation",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Rechenregeln_im_Binärsystem-Concept/Dezimalsystem",
         "source": "Concept/Rechenregeln_im_Binärsystem",
-        "target": "Concept/Dezimalsystem"
-      }
+        "target": "Concept/Dezimalsystem",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Rechenregeln_im_Binärsystem-Concept/Division",
         "source": "Concept/Rechenregeln_im_Binärsystem",
-        "target": "Concept/Division"
-      }
+        "target": "Concept/Division",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Rechenregeln_im_Binärsystem-Concept/Subtraktion",
         "source": "Concept/Rechenregeln_im_Binärsystem",
-        "target": "Concept/Subtraktion"
-      }
+        "target": "Concept/Subtraktion",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Bitweise_Operatoren-Concept/Binärzahlen",
         "source": "Concept/Bitweise_Operatoren",
-        "target": "Concept/Binärzahlen"
-      }
+        "target": "Concept/Binärzahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Bitweise_Operatoren-Concept/Boolesche_Operatoren",
         "source": "Concept/Bitweise_Operatoren",
-        "target": "Concept/Boolesche_Operatoren"
-      }
+        "target": "Concept/Boolesche_Operatoren",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Codierung-Concept/Zeichenvorrat",
         "source": "Concept/Codierung",
-        "target": "Concept/Zeichenvorrat"
-      }
+        "target": "Concept/Zeichenvorrat",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Binärcodierung-Concept/Binärzahlen",
         "source": "Concept/Binärcodierung",
-        "target": "Concept/Binärzahlen"
-      }
+        "target": "Concept/Binärzahlen",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
         "id": "Concept/Binärcodierung-Concept/Codierung",
         "source": "Concept/Binärcodierung",
-        "target": "Concept/Codierung"
-      }
+        "target": "Concept/Codierung",
+        "edgeType": "type1"
+      },
+      "group": "edges"
     },
     {
       "data": {
