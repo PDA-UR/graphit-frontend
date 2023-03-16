@@ -1,0 +1,98 @@
+[
+	{
+		"concept": "id3",
+		"requires": "id2"
+	},
+	{
+		"concept": "id5",
+		"requires": "id4"
+	},
+	{
+		"concept": "id8",
+		"requires": "id6"
+	},
+	{
+		"concept": "id9",
+		"requires": "id6"
+	},
+	{
+		"concept": "id10",
+		"requires": "id6"
+	},
+	{
+		"concept": "id11",
+		"requires": "id12"
+	},
+	{
+		"concept": "id11",
+		"requires": "id13"
+	},
+	{
+		"concept": "id13",
+		"requires": "id14"
+	},
+	{
+		"concept": "id15",
+		"requires": "id8"
+	},
+	{
+		"concept": "id15",
+		"requires": "id17"
+	},
+	{
+		"concept": "id16",
+		"requires": "id8"
+	},
+	{
+		"concept": "id18",
+		"requires": "id19"
+	},
+	{
+		"concept": "id18",
+		"requires": "id20"
+	},
+	{
+		"concept": "id18",
+		"requires": "id21"
+	},
+	{
+		"concept": "id21",
+		"requires": "id8"
+	},
+	{
+		"concept": "id23",
+		"requires": "id11"
+	},
+	{
+		"concept": "id24",
+		"requires": "id11"
+	},
+	{
+		"concept": "id25",
+		"requires": "id8"
+	},
+	{
+		"concept": "id26",
+		"requires": "id8"
+	},
+	{
+		"concept": "id27",
+		"requires": "id8"
+	},
+	{
+		"concept": "id28",
+		"requires": "id9"
+	},
+	{
+		"concept": "id29",
+		"requires": "id9"
+	},
+	{
+		"concept": "id30",
+		"requires": "id8"
+	},
+	{
+		"concept": "id30",
+		"requires": "id9"
+	}
+]
