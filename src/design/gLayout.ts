@@ -10,8 +10,17 @@ export const fcoseOptions = {
     fit: true, 
     nodeDimensionsIncludeLabels: true,
     uniformNodeDimensions: true, // for simple nodes (non-compound)
+    nodeRepulsion: node => 50,
+    idealEdgeLength: edge => 40,
+    edgeElasticity: edge => 0.50,
+    nestingFactor: 0.12,
     gravity: 5,
+    gravityRangeCompound: 1.0, //-> makes parents bigger/smaller
+    gravityCompound: 10.0,
     // packComponents: true, // needs: layout-utilities (test)
+    // Constraints: -> gehen ?? (nur für atomare Knoten)
+    //fixedNodeConstraint: [{nodeId: 'Concept/Binärzahlen', position: {x: 100, y: 200}}], 
+    relativePlacementConstraint: [{top: "Concept/Binärzahlen", bottom: "Concept/Zahlensysteme"}],
 };
 
 // Needs el: "level" in json-object

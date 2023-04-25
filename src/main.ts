@@ -37,6 +37,7 @@ var cy = cytoscape ({
             padding: 0,
             avoidOverlap: true,
             nodeDimensionsIncludeLabels: true,
+            spacingFactor: 0.7,
         });
         defaultL.run();
     },
@@ -62,29 +63,28 @@ var api = cy.expandCollapse({
     // groups by type -> contained in .json-object "type": "VL1"
 });
 
-// TEST - for edges to collapse after nodes is collapsed
-// DOESN'T WORK
-cy.nodes().on("expandcollapse.aftercollapse", function(event) { 
-    const node = this;
-    console.log("collapsed: " + node.id());
-    node.addClass("collapsedNode");
-    //let edges = node.connectedEdges();
-    //console.log(edges);
-    // Doesn't work bc. edges connect to more then one node
-    /*if(edges.length >= 2){ // More than 2 edges go out of node
-        api.collapseEdges(edges, {
-            groupEdgesOfSameTypeOnCollapse: true,
-            allowNestedEdgeCollapse: true,
-        });
-    }*/
+// Applies size of parent by amount of elements containt
+// -> Num of childs of collapse parent affects size (more kids = bigger body)
+cy.nodes().on("expandcollapse.beforecollapse", function(event) { 
+    const parent = this;
+    let numOfChilds = parent.descendants().size();
+    let size = numOfChilds * 5; // evtl. change + auslagern [MAGIC NUMBER!!]
+    console.log(parent.id() + " has " + numOfChilds + " childs");
+    parent.style({
+        'shape': 'round-rectangle',
+        'width': size,
+        'height': size,
+        'background-blacken': "-0.3", // to keep color the same
+    });
 });
+//Add event (evtl. oncollapse) where it collapses edges between two collapsed nodes
 
 
 //Expand/Collapse Parent + highight edges
 cy.unbind("click");
 cy.bind("click", e => {
     var el = e.target;
-    if(el.isNode()) {
+    if(el.isNode()) { //TODO -> Auslagern
         //Toggle multiple classes at once?
         // Highlight only edges from currently selected node
         cy.elements().edges().toggleClass("highlight-edge-out", false);
@@ -160,7 +160,7 @@ searchBtn?.addEventListener("click", function(){
 //TEST: Mouse-over (hover) event:
 cy.on('mouseover', 'node', e => {
     var node = e.target;
-    console.log("Mouse on node" + node.data('label'));
+    //console.log("Mouse on node" + node.data('label'));
 });
 
 

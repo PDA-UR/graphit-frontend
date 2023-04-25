@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Better Layout-Test</title>
+  </head>
+  <body>
+    <div id="parent-btns" class="parent-btns">
+        <button type="button" id="grid">Grid Layout</button>
+        <button type="button" id="fCoSE">fCoSE Layout</button>
+        <button type="button" id="breadth">Breadthfirst Layout</button>
+    </div>
+    <!--cytoscape-containers/instances-->
+    <!-- Preview?
+    <div class="grid-container">
+        <div class="grid-item" id="cy-grid">1</div>
+        <div class="grid-item" id="cy-fCoSE">2</div>
+        <div class="grid-item" id="cy-conc">3</div>
+    </div> -->
+
+    <div id="cy"></div> <!--Main Cy-Container-->
+
+    <script type="module" src="/src/layout-tests/layouts.ts"></script>
+  </body>
+</html>

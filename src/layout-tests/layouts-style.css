@@ -1,0 +1,13 @@
+/* maximize root, body and app */
+html, body,
+#cy {
+	height: 100%;
+	width: 100%;
+}
+
+/*Grid-container*/
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}

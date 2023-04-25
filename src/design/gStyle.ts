@@ -3,21 +3,47 @@
 
 import { EdgeSingular, NodeSingular } from "cytoscape";
 
+// FUNCTIONS
+
+// Farben händisch in json-data spezifizieren
 // Select color of parent for child nodes
-function getParentColor(node:NodeSingular){
+function getParentColorFromData(node:NodeSingular){
     var parent = node.parent();
     if(parent.data("parentcolor") != null) {
         return parent.data("parentcolor");
     } else {
         //when parent is collapsed, parent is target node
-        //console.log(node.data("parentcolor"));
-        console.log(node.id());
         return node.data("parentcolor");
-        //return "black";
         //!! Works, but returns warning that node.data is null
     }
-}
+} // in parent: 'background-color': 'data(parentcolor)',
 
+//TEST1 -> Farben dynamisch hinzufügen
+// Select color according to weight (numOfChilds) of parent
+// Only hue changes
+function getColorFromWeight(parent:ParentNode){
+    var numOfChilds = parent.descendants().size();
+    // Normalize number with num of edges
+    //TODO: Make color-assign better
+    let n = (numOfChilds - 1) / (parent.connectedEdges().size() - 1) * 100;
+    let col = 'hsl(' + n + ', 60%, 70%)';
+    return col;
+} // in parent: 'background-color': getColorFromWeight.bind(this),
+
+//TEST2 -> Farben dynamisch für Child-Nodes
+function getParentColor(node:NodeSingular){
+    if (node.isChild()){
+        return getColorFromWeight(node.parent());
+    } else {
+        // TODO
+        // Wenn kein Parent, da ist kann die Farbe nicht wie oben kalkuliert werden
+        // Hier Notlösung -> Farbe ist anders für unterschiedliche collapse-parents
+        return 'hsl(' + node.outgoers().size() + ', 60%, 70%)';
+    }
+}
+// Funktioniert nur bei expanded parents -> wenn parent collapsed haben alle die gleiche Farbe
+
+// STYLESHEET
 export default [
     // NODE
     { selector: "node",
@@ -26,6 +52,8 @@ export default [
             'text-wrap': 'wrap',
             'text-max-width': '100',
             'border-color': "#666",
+            // If color is specified in json-Object
+            //'background-color': getParentColorFromData.bind(this),
             'background-color': getParentColor.bind(this),
             'background-blacken': "0.3",
         }
@@ -46,7 +74,8 @@ export default [
             'label': 'data(id)',
             'text-valign': 'top',
             'text-halign': 'center',
-            'background-color': 'data(parentcolor)',
+            //'background-color': 'data(parentcolor)', //specified in json-object
+            'background-color': getColorFromWeight.bind(this),
             'shape': 'roundrectangle',
             'border-opacity': '0',
             'compound-sizing-wrt-labels': 'include',
@@ -95,19 +124,24 @@ export default [
         }
     },
     
-    // Selector for both edge and node -> TEST
-    { selector: ":selected", 
+    // Selector for both edge and child-node -> edge no color
+    { selector: ":selected:child", 
         style: { 
             'overlay-color': "#6c757d",
             'overlay-opacity': "0.3",
             'background-color': "red",
+            
         }
     },
-    { selector: ".collapsedNode",
+    // Ausgelagert in beforeCollapse-event
+    /*{ selector: ".collapsedNode",
         style:{
             'shape': 'round-rectangle',
+            // works -> but size = 0 (collapsed has no kids)
+            //'width': sizeFromWeight.bind(this),
+            //'height': sizeFromWeight.bind(this),
         }
-    },
+    },*/
 
     { selector: 'edge.cy-expand-collapse-collapsed-edge',
         style:
