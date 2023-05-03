@@ -1,0 +1,4512 @@
+{
+    "head": {
+      "vars": [
+        "item",
+        "itemLabel",
+        "class",
+        "classLabel",
+        "image",
+        "dependency",
+        "dependencyLabel"
+      ]
+    },
+    "results": {
+      "bindings": [
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q28"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Cartesian Coordinates"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q38"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q28"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Converting between Cartesian and Polar Coordinates"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Cartesian Coordinates"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q38"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q107"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Converting between Cartesian and Polar Coordinates"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Polar Coordinates"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q70"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q13"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Homogeneous Coordinates"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Affine Transformations"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q70"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q93"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Homogeneous Coordinates"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matrix Multiplication"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q92"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matrices"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q93"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q92"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matrix Multiplication"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matrices"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q93"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matrix Multiplication"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q107"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Polar Coordinates"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q140"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q92"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformation Matrices"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matrices"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q29"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q84"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "CIE Standard"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Light Spectrum"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q32"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "CMYK"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q35"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Transformations"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q39"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q32"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Converting between Color Models"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "CMYK"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q39"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q66"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Converting between Color Models"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Greyscale"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q39"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q73"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Converting between Color Models"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "HSV"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q39"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q121"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Converting between Color Models"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "RGB"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q39"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q155"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Converting between Color Models"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "YcbCr"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q66"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Greyscale"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q73"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "HSV"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q121"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "RGB"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q121"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q84"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "RGB"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Light Spectrum"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q155"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q11"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "YcbCr"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Colors"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q20"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q40"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Blur Filters"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Convolution"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q26"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q65"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Canny Edge Detector"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gradients"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q26"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q132"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Canny Edge Detector"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sobel Filter"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q40"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Convolution"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q44"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q94"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Dilate"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Morphological Operators"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q48"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q26"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Edge Detection"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Canny Edge Detector"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q48"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q40"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Edge Detection"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Convolution"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q48"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q132"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Edge Detection"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sobel Filter"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q48"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q139"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Edge Detection"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Threshold"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q49"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q94"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Erode"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Morphological Operators"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q59"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Flood Fill"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q60"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q40"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gaussian Blur"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Convolution"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q68"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q69"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Histogram Equalization"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Histograms"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q75"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q33"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Filter Basics"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Mixing"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q75"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q66"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Filter Basics"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Greyscale"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q75"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Filter Basics"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q76"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q20"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing an Image Editor"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Blur Filters"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q76"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q47"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing an Image Editor"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Drawing Images (2D)"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q76"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q59"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing an Image Editor"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Flood Fill"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q76"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q77"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing an Image Editor"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing Image Filters"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q76"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q129"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing an Image Editor"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sharpen Filters"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q76"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q139"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing an Image Editor"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Threshold"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q77"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q75"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Implementing Image Filters"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Filter Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q81"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Invert Colors"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q81"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Invert Colors"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q82"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q40"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Lanczos Image Scaling"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Convolution"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q94"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Morphological Operators"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q117"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q20"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Removing Noise from an Image"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Blur Filters"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q117"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q44"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Removing Noise from an Image"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Dilate"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q117"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q49"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Removing Noise from an Image"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Erode"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q120"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q82"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Resizing Images"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Lanczos Image Scaling"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q120"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Resizing Images"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q129"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q40"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sharpen Filters"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Convolution"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q132"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q40"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Sobel Filter"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Convolution"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q139"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q66"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Threshold"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Greyscale"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q139"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q12"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Threshold"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Image Manipulation"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q15"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q1"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q151"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ArUco Markers"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Markers"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Visual Markers"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q51"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q1"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q15"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Extracting Marker Positions"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Markers"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "ArUco Markers"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q51"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q1"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q151"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Extracting Marker Positions"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Markers"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Visual Markers"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q112"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q1"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q151"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "QR Codes"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Markers"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Visual Markers"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q118"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q2"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q23"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a 3D Overlay in a Live Video"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Augmented Reality"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera Calibration"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q118"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q2"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q27"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a 3D Overlay in a Live Video"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Augmented Reality"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Capturing Camera Images in OpenCV"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q118"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q2"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q99"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a 3D Overlay in a Live Video"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Augmented Reality"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenCV Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q118"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q2"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q142"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a 3D Overlay in a Live Video"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Augmented Reality"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transforming between 3D Coordinate Systems"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q33"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Mixing"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q33"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Mixing"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q47"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q14"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Drawing Images (2D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Antialiasing"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q47"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q33"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Drawing Images (2D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Mixing"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q47"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q115"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Drawing Images (2D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rasterizing Lines"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q65"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q66"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gradients"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Greyscale"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q65"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gradients"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q69"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q66"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Histograms"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Greyscale"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q69"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Histograms"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q145"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q3"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q33"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transparency (2D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bitmap Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Mixing"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q23"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q24"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera Calibration"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera Intrinsics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q24"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q22"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera Intrinsics"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q25"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q23"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera-Projector Calibration"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera Calibration"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q25"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q111"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera-Projector Calibration"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Projections"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q25"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q149"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Camera-Projector Calibration"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Virtual Cameras"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q37"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q48"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Contour Finding"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Edge Detection"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q55"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q72"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Finding Lines in an Image"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Hough Transform"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q56"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q37"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Fitting Lines (2D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Contour Finding"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q57"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q37"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Fitting Lines (3D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Contour Finding"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q57"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q56"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Fitting Lines (3D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Fitting Lines (2D)"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q71"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q72"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Hough Circles"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Hough Transform"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q74"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q67"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Identifying Faces in an Image"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Haar Cascades"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q88"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q101"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Lucas-Kanade Optical Flow Algorithm"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Optical Flow"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q90"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q151"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Markerless Tracking"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Visual Markers"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q91"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q34"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matching an Object by Color"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Color Models"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q91"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q59"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matching an Object by Color"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Flood Fill"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q91"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q73"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Matching an Object by Color"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "HSV"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q95"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q4"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q101"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Motion Tracking"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Vision"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Optical Flow"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q31"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Clipping in OpenGL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q61"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q62"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q61"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Fragment Shaders"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q62"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Fragment Shaders"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q62"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q126"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Fragment Shaders"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shaders in OpenGL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q63"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q61"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Vertex Shaders"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q63"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Vertex Shaders"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q63"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q126"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Vertex Shaders"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shaders in OpenGL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q63"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q128"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Vertex Shaders"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q79"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Interacting with OpenGL Scenes"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q98"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Objects in OpenGL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q126"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shaders in OpenGL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q137"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Texture Mapping in OpenGL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q141"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformations in OpenGL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q141"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q140"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformations in OpenGL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformation Matrices"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q150"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q5"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Virtual Cameras in OpenGL"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q14"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q86"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Antialiasing"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Line Rasterization Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q14"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Antialiasing"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q21"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q86"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bresenham Line Drawing Algorithm"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Line Rasterization Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q21"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q105"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bresenham Line Drawing Algorithm"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Pixels"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q86"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q87"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Line Rasterization Basics"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Lines"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q115"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q21"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rasterizing Lines"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Bresenham Line Drawing Algorithm"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q115"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q87"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rasterizing Lines"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Lines"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q122"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q6"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q13"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rotation (2D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "2D Vector Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Affine Transformations"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q27"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q7"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q99"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Capturing Camera Images in OpenCV"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenCV"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenCV Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q17"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q36"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Backface Culling"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Computer Graphics Pipeline"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q96"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q41"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Normals"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Cross Product"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q96"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Normals"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q62"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Fragment Shaders"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q63"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "GLSL Vertex Shaders"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q79"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Interacting with OpenGL Scenes"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q98"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Objects in OpenGL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q100"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "OpenGL Basic Concepts"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q137"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Texture Mapping in OpenGL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q141"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformations in OpenGL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q119"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q150"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rendering a Complex 3D Scene"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Virtual Cameras in OpenGL"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q124"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q123"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rotation Matrix (3D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Rotation Matrix (2D)"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q125"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q140"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Scenegraphs"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformation Matrices"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q131"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q147"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Simplifying Meshes"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Triangle Meshes"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q134"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q136"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Subdivision Modeling"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Tesselation"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q134"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q147"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Subdivision Modeling"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Triangle Meshes"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q136"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q147"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Tesselation"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Triangle Meshes"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q142"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q140"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transforming between 3D Coordinate Systems"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformation Matrices"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q144"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q143"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Translation Matrix (3D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Translation Matrix (2D)"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q146"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q145"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transparency (3D)"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transparency (2D)"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q148"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q147"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Triangle Strips and Fans"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Triangle Meshes"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q149"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q111"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Virtual Cameras"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Projections"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q154"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q111"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Window-Viewport Transformation"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Projections"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q154"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q8"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q140"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Window-Viewport Transformation"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "3D Graphics"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Transformation Matrices"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q58"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q128"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Flat Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q64"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q96"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gouraud Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Normals"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q64"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q128"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gouraud Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q104"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q96"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Phong Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Normals"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q104"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q128"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Phong Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q127"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q58"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Flat Shading"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q127"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q64"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Gouraud Shading"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q127"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q104"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Phong Shading"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q127"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q9"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q128"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Shading Basics"
+          }
+        },
+        {
+          "item": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q13"
+          },
+          "class": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q10"
+          },
+          "dependency": {
+            "type": "uri",
+            "value": "https://graphit.ur.de/entity/Q106"
+          },
+          "itemLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Affine Transformations"
+          },
+          "classLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Mathematical Foundations"
+          },
+          "dependencyLabel": {
+            "xml:lang": "en",
+            "type": "literal",
+            "value": "Points and Vectors"
+          }
+        }
+      ]
+    }
+  }
