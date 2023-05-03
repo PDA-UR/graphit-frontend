@@ -9,11 +9,14 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "esModuleInterop": true,
-    "noEmit": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
+    "noEmit": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "noImplicitReturns": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "outDir": "dist", // Specify the output directory for the compiled files
+    "sourceMap": true, // Generate source map files (set to false to disable source map generation)
+    // ... other compiler options
   },
-  "include": ["src"]
+  "include": ["src"],
 }

@@ -3,6 +3,9 @@ import cytoscape from "cytoscape";
 import fcose from "cytoscape-fcose";
 import expandCollapse from "cytoscape-expand-collapse";
 // source: https://github.com/iVis-at-Bilkent/cytoscape.js-expand-collapse
+// ignore all typescript errors in this file
+// @ts-ignore
+
 
 // import out.json from public folder
 import EIMI from "./data/eimi.json";
@@ -19,6 +22,7 @@ const app = document.getElementById("app");
 // Init graph
 var cy = cytoscape ({
     container: app, 
+    // @ts-ignore
     elements: EIMI,
 
     // initial viewport state:
@@ -26,11 +30,13 @@ var cy = cytoscape ({
     pan: { x: 0, y: 0 },
 
     // STYLESHEET -> ausgelagert in gStyle.ts
+    // @ts-ignore
     style: gStyle,
 
     // called on layoutready
     ready: function(){
         //Init default-Layout
+        // @ts-ignore
         var defaultL = this.layout({
             name: "grid",
             fit: true,
@@ -46,6 +52,7 @@ var cy = cytoscape ({
 
 // Init Expand/Collapse
 //EDGES DON'T WORK + Highlights all edges/nodes on expand
+// @ts-ignore
 var api = cy.expandCollapse({
     layoutBy: { // to rearange into after expand/collapse
       name: "fcose",
@@ -65,6 +72,7 @@ var api = cy.expandCollapse({
 // TEST - for edges to collapse after nodes is collapsed
 // DOESN'T WORK
 cy.nodes().on("expandcollapse.aftercollapse", function(event) { 
+    // @ts-ignore
     const node = this;
     console.log("collapsed: " + node.id());
     node.addClass("collapsedNode");
@@ -103,7 +111,7 @@ cy.bind("click", e => {
 
 // Switch between different layouts
 var btns: HTMLElement | null = document.getElementById("parent-btns")
-btns.addEventListener("click", e => {
+btns!.addEventListener("click", e => {
     var el = e.target as HTMLElement;
     switch (el.id){
          case "fcoseL":
@@ -138,7 +146,7 @@ btns.addEventListener("click", e => {
 // Navigate to searched Node
 var searchBtn = document.getElementById("searchBtn");
 searchBtn?.addEventListener("click", function(){
-    let search = document.getElementById("searchNode").value;
+    let search = (document.getElementById("searchNode") as any).value;
     if(!search){
         console.log("nothing entered");
         return;

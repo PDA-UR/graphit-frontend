@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build:test": "tsc && vite build --base=/graphit-test/",
+    "build:prod": "tsc && vite build",
     "preview": "vite preview"
   },
   "devDependencies": {
     "@types/cytoscape": "^3.19.9",
-    "@types/cytoscape-fcose": "^2.1.0",
+    "@types/cytoscape-fcose": "^2.2.0",
     "@types/node": "^18.14.1",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"

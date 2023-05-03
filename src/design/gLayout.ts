@@ -21,11 +21,11 @@ export const concOptions = {
     minNodeSpacing: 60,
     avoidOverlap: true,
     nodeDimensionsIncludeLabels: false,
-    concentric: function(node){
+    concentric: function(node: any){
         return node.parent().data("level");
         //return node.data("parent");
     },
-    levelWidth: function(nodes){ 
+    levelWidth: function(nodes: any){ 
         return nodes.maxDegree() / 10;
     },
 };
@@ -36,7 +36,7 @@ export const concOptions2 = {
     minNodeSpacing: 50,
     avoidOverlap: true,
     nodeDimensionsIncludeLabels: false,
-    concentric: function(node){
+    concentric: function(node: any){
         return node.data("parent");
     },
 }
