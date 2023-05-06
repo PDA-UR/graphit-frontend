@@ -1,18 +1,19 @@
 
 import { WBK } from 'wikibase-sdk'
+import type {SparqlResults} from 'wikibase-sdk';
 
 // Dont use this class directly, use the SparqlClient class instead
 
 export default class QueryDispatcher {
-	instance = 'https://graphit.ur.de'
-    endpoint = 'https://query.graphit.ur.de/proxy/wdqs/bigdata/namespace/wdq/sparql'
+	private readonly instance = 'https://graphit.ur.de'
+    private readonly endpoint = 'https://query.graphit.ur.de/proxy/wdqs/bigdata/namespace/wdq/sparql'
 
-    wbk = WBK({
+    private readonly wbk = WBK({
         sparqlEndpoint: this.endpoint,
         instance: this.instance
     });
 
-	async query(sparql: string) {
+	async query(sparql: string): Promise<SparqlResults> {
 		const url = this.wbk.sparqlQuery(sparql);
         const headers = {}; 
         
