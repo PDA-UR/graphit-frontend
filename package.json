@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:test": "tsc && vite build --base=/graphit-test/",
+    "build:dev": "tsc && vite build",
+    "build:test": "tsc && vite build",
     "build:prod": "tsc && vite build",
     "preview": "vite preview"
   },
