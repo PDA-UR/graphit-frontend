@@ -8,7 +8,7 @@ import expandCollapse from "cytoscape-expand-collapse";
 
 
 // import out.json from public folder
-import EIMI from "./data/eimi.json";
+import EIMI from "/src/data/eimi.json";
 import * as gLayout from "./design/gLayout";
 import gStyle from "./design/gStyle";
 
