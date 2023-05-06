@@ -1,26 +1,26 @@
 {
-  "name": "graphit-web-prototype",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build:dev": "tsc && vite build",
-    "build:test": "tsc && vite build",
-    "build:prod": "tsc && vite build",
-    "preview": "vite preview"
-  },
-  "devDependencies": {
-    "@types/cytoscape": "^3.19.9",
-    "@types/cytoscape-fcose": "^2.2.0",
-    "@types/node": "^18.14.1",
-    "typescript": "^4.9.3",
-    "vite": "^4.1.0"
-  },
-  "dependencies": {
-    "cytoscape": "^3.23.0",
-    "cytoscape-expand-collapse": "^4.1.0",
-    "cytoscape-fcose": "^2.2.0",
-    "wikibase-sdk": "^9.1.0"
-  }
+	"name": "graphit-web-prototype",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build:dev": "tsc && vite build",
+		"build:test": "tsc && vite build",
+		"build:prod": "tsc && vite build",
+		"preview": "vite preview"
+	},
+	"devDependencies": {
+		"@types/cytoscape": "^3.19.9",
+		"@types/cytoscape-fcose": "^2.2.0",
+		"@types/node": "^18.14.1",
+		"typescript": "^4.9.3",
+		"vite": "^4.1.0"
+	},
+	"dependencies": {
+		"cytoscape": "^3.23.0",
+		"cytoscape-expand-collapse": "^4.1.0",
+		"cytoscape-fcose": "^2.2.0",
+		"wikibase-sdk": "^9.1.0"
+	}
 }

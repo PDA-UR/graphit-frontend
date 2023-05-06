@@ -1,11 +1,13 @@
-import QueryDispatcher from "./QueryDispatcher";
 import type { SparqlResults } from "wikibase-sdk";
+
+import QueryDispatcher from "./QueryDispatcher";
 import { dependentsAndDependenciesQuery } from "./SparqlQueries";
 
 export class SparqlClient {
 	private readonly queryDispatcher: QueryDispatcher;
 
 	constructor() {
+		console.log("SparqlClient constructor");
 		this.queryDispatcher = new QueryDispatcher();
 	}
 
