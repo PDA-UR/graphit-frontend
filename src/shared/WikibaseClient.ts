@@ -1,8 +1,8 @@
 import { ElementDefinition } from "cytoscape";
 import type { SparqlResults } from "wikibase-sdk";
 
-import { SparqlClient } from "./SparqlClient";
-import { SparqlParser } from "./SparqlParser";
+import { SparqlClient } from "./sparql/SparqlClient";
+import { SparqlParser } from "./sparql/SparqlParser";
 
 export default class WikibaseClient {
 	private readonly sparqlClient: SparqlClient;
@@ -13,8 +13,13 @@ export default class WikibaseClient {
 		this.sparqlParser = new SparqlParser();
 	}
 
-	async query(query: string): Promise<ElementDefinition[]> {
+	async query(query: string): Promise<SparqlResults> {
 		const results = await this.sparqlClient.query(query);
+		return results;
+	}
+
+	async getDependentsAndDependencies(): Promise<ElementDefinition[]> {
+		const results = await this.sparqlClient.getDependentsAndDependencies();
 		const graph = this.sparqlParser.parsePairs(
 			["source", "dependency"],
 			"depends on",
