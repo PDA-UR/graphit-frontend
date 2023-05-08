@@ -6,3 +6,15 @@ body,
 	width: 100%;
 	overflow: hidden;
 }
+
+.badges {
+	height: 15px;
+}
+
+.badge {
+	height: 100%;
+}
+
+.badge > img {
+	height: 100%;
+}

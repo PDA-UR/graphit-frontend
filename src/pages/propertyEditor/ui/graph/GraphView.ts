@@ -2,9 +2,16 @@ import { GraphModel } from "./GraphModel";
 import cytoscape from "cytoscape";
 import { View } from "../../../../shared/ui/View";
 
+import interestedNormal from "../../icons/interested_normal.svg";
+
 export interface GraphViewOptions extends cytoscape.CytoscapeOptions {
 	extensions?: any[];
 }
+
+const nodeSize = (ele: any) => {
+	const degree = ele.degree();
+	return 7 + degree * 7;
+};
 
 const DEFAULT_OPTIONS: GraphViewOptions = {
 	layout: {
@@ -16,6 +23,21 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
 			style: {
 				"background-color": "#666",
 				label: "data(label)",
+				width: nodeSize,
+				height: nodeSize,
+			},
+		},
+		{
+			selector: "node:selected",
+			style: {
+				"border-width": "3px",
+				"border-color": "#000000",
+			},
+		},
+		{
+			selector: "node[completed = 'true']",
+			style: {
+				"background-color": "#6DBB6D",
 			},
 		},
 		{
@@ -43,9 +65,7 @@ export class GraphView extends View {
 	) {
 		super();
 
-		if (options.extensions) {
-			this.loadExtensions(options.extensions);
-		}
+		if (options.extensions) this.loadExtensions(options.extensions);
 		this.$container = $container;
 		this.cy = cytoscape({
 			container: this.$container,
@@ -53,8 +73,30 @@ export class GraphView extends View {
 			...DEFAULT_OPTIONS,
 			...options,
 		});
+
+		this.cy.nodeHtmlLabel([
+			{
+				query: "node",
+				halign: "center",
+				valign: "center",
+				halignBox: "center",
+				valignBox: "center",
+				tpl: this.badgeTemplate,
+			},
+		]);
 	}
 
+	badgeTemplate = (data: any) => {
+		console.log(data);
+		const badges = [];
+
+		if (data.interested)
+			badges.push(
+				"<div class='badge'><img src='" + interestedNormal + "'/></div>"
+			);
+
+		return `<div class="badges">${badges.join("")}</div>`;
+	};
 	private loadExtensions(extensions: any[]) {
 		extensions.forEach((extension) => {
 			cytoscape.use(extension);
@@ -66,8 +108,13 @@ export class GraphView extends View {
 		this.cy.userPanningEnabled(on);
 		this.cy.boxSelectionEnabled(!on);
 
-		if (on) this.cy.nodes().ungrabify();
-		else this.cy.nodes().grabify();
+		if (on) {
+			this.cy.nodes().ungrabify();
+			this.cy.nodes().unselectify();
+		} else {
+			this.cy.nodes().grabify();
+			this.cy.nodes().selectify();
+		}
 	}
 
 	setGrabMode() {

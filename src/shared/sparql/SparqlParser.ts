@@ -134,6 +134,7 @@ export class SparqlParser {
 			const value = binding[variable]?.value;
 			if (value) node.data[key] = value;
 		}
+
 		return node.data.id ? node : null;
 	}
 }

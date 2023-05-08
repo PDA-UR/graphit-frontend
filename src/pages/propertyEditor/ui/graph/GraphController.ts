@@ -1,10 +1,12 @@
 import { ElementDefinition } from "cytoscape";
 import { GraphModel } from "./GraphModel";
 import { GraphView } from "./GraphView";
-import dagre from "cytoscape-dagre";
 import { eventBus } from "../../events/EventBus";
 import { ToolbarViewControllerEvents } from "../toolbar/ToolbarController";
 import { DEFAULT_TOOL, Tool } from "../toolbar/ToolbarModel";
+
+import dagre from "cytoscape-dagre";
+import nodeHtmlLabel from "cytoscape-node-html-label";
 
 export class GraphController {
 	private readonly graphView: GraphView;
@@ -16,7 +18,7 @@ export class GraphController {
 			this.graphModel,
 			document.getElementById("app")!,
 			{
-				extensions: [dagre],
+				extensions: [dagre, nodeHtmlLabel],
 			}
 		);
 
