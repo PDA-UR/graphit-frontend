@@ -18,3 +18,32 @@ body,
 .badge > img {
 	height: 100%;
 }
+
+.base-container {
+	background-color: #f8f8f8;
+	padding: 10px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	font-family: "Patrick Hand", cursive; /* Handwritten-style font */
+}
+
+.base-item {
+	padding: 5px;
+	box-sizing: border-box;
+	border: 1px dashed #b0b0b0; /* Dashed border */
+	background-color: #f8f8f8;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out; /* Smooth transition */
+	text-align: center;
+	align-items: center;
+	user-select: none;
+}
+
+.base-item:hover {
+	background-color: #e0e0e0;
+}
+
+.base-item.active {
+	border: 1px solid #b0b0b0; /* Solid border */
+	background-color: #ffffff;
+}

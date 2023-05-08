@@ -9,19 +9,23 @@
 	<body>
 		<div id="app"></div>
 
-		<div id="toolbar" class="container">
-			<div id="grab" class="button tool">Grab</div>
-			<div id="mouse" class="button tool">Mouse</div>
+		<div id="toolbar" class="base-container">
+			<div id="grab" class="tool base-item">Grab</div>
+			<div id="mouse" class="tool base-item">Mouse</div>
 		</div>
 
-		<div id="property-modal" class="modal">
-			<div id="complete-property" class="property button"></div>
-			<div id="interest-property" class="property button"></div>
-			<div id="rate-property" class="property button"></div>
+		<div id="property-modal" class="modal base-container">
+			<div id="complete-property" class="property base-item">
+				Toggle completion
+			</div>
+			<div id="interest-property" class="property base-item">
+				Toggle interest
+			</div>
+			<div id="rate-property" class="property base-item">Rate</div>
 		</div>
 
-		<div id="filter-button" class="button">F</div>
-		<div id="save-button" class="button">Save</div>
+		<div id="filter-button" class="base-item">F</div>
+		<div id="save-button" class="base-item">Save</div>
 		<script type="module" src="./main.ts"></script>
 	</body>
 </html>

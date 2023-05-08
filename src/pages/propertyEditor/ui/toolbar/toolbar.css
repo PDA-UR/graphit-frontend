@@ -8,29 +8,6 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #f8f8f8;
-	padding: 10px;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-	z-index: 1000;
-	font-family: "Patrick Hand", cursive; /* Handwritten-style font */
-	/* rounded corners left right bottom */
 	border-radius: 0 0 3px 3px;
-}
-
-.tool {
-	margin: 0 5px;
-	padding: 5px 10px;
-	border: 1px dashed #b0b0b0; /* Dashed border */
-	background-color: #f8f8f8;
-	cursor: pointer;
-	transition: background-color 0.2s ease-in-out; /* Smooth transition */
-}
-
-.tool:hover {
-	background-color: #e0e0e0;
-}
-
-.tool.active {
-	border: 1px solid #b0b0b0; /* Solid border */
-	background-color: #ffffff;
+	gap: 10px;
 }

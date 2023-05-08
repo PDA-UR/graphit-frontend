@@ -81,12 +81,12 @@ export class GraphView extends View {
 				valign: "center",
 				halignBox: "center",
 				valignBox: "center",
-				tpl: this.badgeTemplate,
+				tpl: this.getBadge,
 			},
 		]);
 	}
 
-	badgeTemplate = (data: any) => {
+	private getBadge = (data: any) => {
 		console.log(data);
 		const badges = [];
 
@@ -97,6 +97,7 @@ export class GraphView extends View {
 
 		return `<div class="badges">${badges.join("")}</div>`;
 	};
+
 	private loadExtensions(extensions: any[]) {
 		extensions.forEach((extension) => {
 			cytoscape.use(extension);
