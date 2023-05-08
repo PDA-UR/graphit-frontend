@@ -1,5 +1,6 @@
 import { GraphModel } from "./GraphModel";
 import cytoscape from "cytoscape";
+import { View } from "../../../../shared/ui/View";
 
 export interface GraphViewOptions extends cytoscape.CytoscapeOptions {
 	extensions?: any[];
@@ -30,26 +31,25 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
 	],
 };
 
-export class GraphView {
-	private readonly graph: GraphModel;
-	private readonly graphContainer: HTMLElement;
+export class GraphView extends View {
 	private readonly cy: any;
 
+	private readonly $container: HTMLElement;
+
 	constructor(
-		graph: GraphModel,
-		container: HTMLElement,
+		model: GraphModel,
+		$container: HTMLElement,
 		options: GraphViewOptions
 	) {
-		this.graph = graph;
-		this.graphContainer = container;
+		super();
 
 		if (options.extensions) {
 			this.loadExtensions(options.extensions);
 		}
-
+		this.$container = $container;
 		this.cy = cytoscape({
-			container: this.graphContainer,
-			elements: this.graph,
+			container: this.$container,
+			elements: model,
 			...DEFAULT_OPTIONS,
 			...options,
 		});
