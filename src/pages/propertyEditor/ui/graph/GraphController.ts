@@ -4,7 +4,7 @@ import { GraphView } from "./GraphView";
 import dagre from "cytoscape-dagre";
 import { eventBus } from "../../events/EventBus";
 import { ToolbarViewControllerEvents } from "../toolbar/ToolbarController";
-import { Tool } from "../toolbar/ToolbarModel";
+import { DEFAULT_TOOL, Tool } from "../toolbar/ToolbarModel";
 
 export class GraphController {
 	private readonly graphView: GraphView;
@@ -20,6 +20,8 @@ export class GraphController {
 			}
 		);
 
+		this.switchTool(DEFAULT_TOOL);
+
 		eventBus.addListener(
 			ToolbarViewControllerEvents.SWITCH_TOOL,
 			this.switchTool
@@ -27,7 +29,6 @@ export class GraphController {
 	}
 
 	private switchTool = (tool: string) => {
-		console.log("switch to:", tool);
 		switch (tool) {
 			case Tool.GRAB:
 				this.graphView.setGrabMode();
