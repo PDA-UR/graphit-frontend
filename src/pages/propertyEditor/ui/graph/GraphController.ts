@@ -1,7 +1,7 @@
 import { ElementDefinition } from "cytoscape";
 import { GraphModel } from "./GraphModel";
 import { GraphView, GraphViewEvents } from "./GraphView";
-import { eventBus } from "../../events/EventBus";
+import { eventBus } from "../../global/EventBus";
 import { ToolbarViewControllerEvents } from "../toolbar/ToolbarController";
 import { DEFAULT_TOOL, Tool } from "../toolbar/ToolbarModel";
 

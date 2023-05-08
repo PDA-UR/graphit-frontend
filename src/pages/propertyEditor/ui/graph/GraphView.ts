@@ -101,10 +101,9 @@ export class GraphView extends View {
 	}
 
 	private getBadge = (data: any) => {
-		console.log(data);
 		const badges = [];
 
-		if (data.interested)
+		if (data.interested === "true")
 			badges.push(
 				"<div class='badge'><img src='" + interestedNormal + "'/></div>"
 			);

@@ -9,7 +9,6 @@ export default class WikibaseClient {
 	private readonly sparqlParser: SparqlParser;
 
 	constructor() {
-		console.log("WikibaseClient constructor");
 		this.sparqlClient = new SparqlClient();
 		this.sparqlParser = new SparqlParser();
 	}

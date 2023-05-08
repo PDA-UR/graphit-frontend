@@ -1,4 +1,4 @@
-import { eventBus } from "../../events/EventBus";
+import { eventBus } from "../../global/EventBus";
 import {
 	PropertyModalView,
 	PropertyModalViewEvents,

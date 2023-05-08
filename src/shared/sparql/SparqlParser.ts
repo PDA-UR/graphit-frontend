@@ -132,8 +132,11 @@ export class SparqlParser {
 			key = key.charAt(0).toLowerCase() + key.slice(1);
 
 			const value = binding[variable]?.value;
+
 			if (value) node.data[key] = value;
 		}
+
+		if (node.data.label === "Color Models") console.log(node);
 
 		return node.data.id ? node : null;
 	}

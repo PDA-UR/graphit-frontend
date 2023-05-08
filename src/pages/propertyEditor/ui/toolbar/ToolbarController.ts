@@ -1,4 +1,4 @@
-import { eventBus } from "../../events/EventBus";
+import { eventBus } from "../../global/EventBus";
 import { Tool, ToolbarModel } from "./ToolbarModel";
 import { ToolbarView, ToolbarViewEvents } from "./ToolbarView";
 

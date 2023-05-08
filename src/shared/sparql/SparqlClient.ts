@@ -1,5 +1,5 @@
 import type { SparqlResults } from "wikibase-sdk";
-
+import { state } from "../../pages/propertyEditor/global/State";
 import QueryDispatcher from "./QueryDispatcher";
 import { dependentsAndDependenciesQuery } from "./SparqlQueries";
 
@@ -18,7 +18,7 @@ export class SparqlClient {
 	// ~~~~~~~~~~ Pre built queries: ~~~~~~~~~ //
 
 	async getDependentsAndDependencies(): Promise<SparqlResults> {
-		const query = dependentsAndDependenciesQuery();
+		const query = dependentsAndDependenciesQuery(state.username);
 		return this.query(query);
 	}
 }
