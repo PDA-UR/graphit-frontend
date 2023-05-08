@@ -114,7 +114,7 @@ export class SparqlParser {
 	private parseNode(
 		prefix: string,
 		binding: any,
-		vars: string[]
+		vars: ReadonlyArray<string>
 	): ElementDefinition | null {
 		const idKey = prefix,
 			labelKey = prefix + "Label";
@@ -134,7 +134,6 @@ export class SparqlParser {
 			const value = binding[variable]?.value;
 			if (value) node.data[key] = value;
 		}
-		console.log("node", node, binding, vars);
 		return node.data.id ? node : null;
 	}
 }
