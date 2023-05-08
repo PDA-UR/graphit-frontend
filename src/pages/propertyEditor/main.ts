@@ -1,7 +1,7 @@
 import cytoscape from "cytoscape";
 import QueryDispatcher from "../../shared/sparql/QueryDispatcher";
 import WikibaseClient from "../../shared/WikibaseClient";
-// import WikibaseClient from "../../shared/WikibaseClient";
+import { GraphController } from "./graph/GraphController";
 
 import "./style.css";
 
@@ -10,10 +10,8 @@ async function main() {
 	const wikibase = new WikibaseClient();
 	const elements = await wikibase.getDependentsAndDependencies();
 	console.log(elements);
-	const cy = cytoscape({
-		container: document.getElementById("app"),
-		elements: elements,
-	});
+
+	const graphController = new GraphController(elements);
 }
 
 main();
