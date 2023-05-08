@@ -53,6 +53,10 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
 	],
 };
 
+export enum GraphViewEvents {
+	SELECTION_CHANGED = "selectionChanged",
+}
+
 export class GraphView extends View {
 	private readonly cy: any;
 
@@ -84,6 +88,16 @@ export class GraphView extends View {
 				tpl: this.getBadge,
 			},
 		]);
+
+		this.cy.on("select", "node", (event: any) => {
+			const numSelectedNodes = this.cy.$(":selected").length;
+			this.emit(GraphViewEvents.SELECTION_CHANGED, numSelectedNodes);
+		});
+
+		this.cy.on("unselect", "node", (event: any) => {
+			const numSelectedNodes = this.cy.$(":selected").length;
+			this.emit(GraphViewEvents.SELECTION_CHANGED, numSelectedNodes);
+		});
 	}
 
 	private getBadge = (data: any) => {
