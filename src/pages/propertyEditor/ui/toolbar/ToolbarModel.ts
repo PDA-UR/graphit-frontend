@@ -1,9 +1,11 @@
 export enum Tool {
 	GRAB = "grab",
 	MOUSE = "mouse",
-	RECTANGLE = "rectangle",
 }
 
+export const DEFAULT_TOOL = Tool.GRAB;
+
 export class ToolbarModel {
-	activeTool: Tool = Tool.MOUSE;
+	activeTool: Tool = DEFAULT_TOOL;
+	lastTool: Tool = DEFAULT_TOOL;
 }

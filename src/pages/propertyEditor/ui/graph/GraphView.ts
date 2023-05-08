@@ -60,4 +60,21 @@ export class GraphView extends View {
 			cytoscape.use(extension);
 		});
 	}
+
+	private toggleGrabMode(on: boolean) {
+		this.cy.panningEnabled(on);
+		this.cy.userPanningEnabled(on);
+		this.cy.boxSelectionEnabled(!on);
+
+		if (on) this.cy.nodes().ungrabify();
+		else this.cy.nodes().grabify();
+	}
+
+	setGrabMode() {
+		this.toggleGrabMode(true);
+	}
+
+	setMouseMode() {
+		this.toggleGrabMode(false);
+	}
 }

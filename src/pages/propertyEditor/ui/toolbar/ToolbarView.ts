@@ -13,16 +13,12 @@ export class ToolbarView extends View {
 
 	private readonly $grabTool: HTMLDivElement;
 	private readonly $mouseTool: HTMLDivElement;
-	private readonly $rectangleTool: HTMLDivElement;
 
 	constructor() {
 		super();
 		this.$container = document.getElementById("toolbar") as HTMLDivElement;
 		this.$grabTool = this.$container.querySelector("#grab") as HTMLDivElement;
 		this.$mouseTool = this.$container.querySelector("#mouse") as HTMLDivElement;
-		this.$rectangleTool = this.$container.querySelector(
-			"#rectangle"
-		) as HTMLDivElement;
 
 		this.$initListeners();
 	}
@@ -30,7 +26,6 @@ export class ToolbarView extends View {
 	private $initListeners() {
 		this.$grabTool.addEventListener("click", this.onGrabToolClick);
 		this.$mouseTool.addEventListener("click", this.onMouseToolClick);
-		this.$rectangleTool.addEventListener("click", this.onRectangleToolClick);
 	}
 
 	private onGrabToolClick = () => {
@@ -40,9 +35,6 @@ export class ToolbarView extends View {
 	private onMouseToolClick = () => {
 		this.emit(ToolbarViewEvents.MOUSE_TOOL_CLICK);
 	};
-	private onRectangleToolClick = () => {
-		this.emit(ToolbarViewEvents.RECTANGLE_TOOL_CLICK);
-	};
 
 	private $getToolElement(tool: Tool): HTMLDivElement {
 		switch (tool) {
@@ -50,8 +42,6 @@ export class ToolbarView extends View {
 				return this.$grabTool;
 			case Tool.MOUSE:
 				return this.$mouseTool;
-			case Tool.RECTANGLE:
-				return this.$rectangleTool;
 		}
 	}
 

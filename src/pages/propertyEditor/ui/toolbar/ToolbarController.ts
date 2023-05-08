@@ -13,6 +13,7 @@ export class ToolbarViewController {
 	constructor() {
 		this.toolbarModel = new ToolbarModel();
 		this.toolbarView = new ToolbarView();
+		this.toolbarView.setTool(this.toolbarModel.activeTool, true);
 
 		this.toolbarView.on(
 			ToolbarViewEvents.GRAB_TOOL_CLICK,
@@ -22,27 +23,34 @@ export class ToolbarViewController {
 			ToolbarViewEvents.MOUSE_TOOL_CLICK,
 			this.onMouseToolClick
 		);
-		this.toolbarView.on(
-			ToolbarViewEvents.RECTANGLE_TOOL_CLICK,
-			this.onRectangleToolClick
-		);
+
+		document.addEventListener("keydown", (e) => {
+			if (e.code === "Space") {
+				this.changeTool(Tool.GRAB, true);
+			}
+		});
+
+		document.addEventListener("keyup", (e) => {
+			if (e.code === "Space") {
+				this.changeTool(this.toolbarModel.lastTool, true);
+			}
+		});
 	}
 
 	private onGrabToolClick = () => {
-		this.toolbarModel.activeTool = Tool.GRAB;
-		this.toolbarView.setTool(Tool.GRAB, true);
-		eventBus.emit(ToolbarViewControllerEvents.SWITCH_TOOL, Tool.GRAB);
+		this.changeTool(Tool.GRAB);
 	};
 
 	private onMouseToolClick = () => {
-		this.toolbarModel.activeTool = Tool.MOUSE;
-		this.toolbarView.setTool(Tool.MOUSE, true);
-		eventBus.emit(ToolbarViewControllerEvents.SWITCH_TOOL, Tool.MOUSE);
+		this.changeTool(Tool.MOUSE);
 	};
 
-	private onRectangleToolClick = () => {
-		this.toolbarModel.activeTool = Tool.RECTANGLE;
-		this.toolbarView.setTool(Tool.RECTANGLE, true);
-		eventBus.emit(ToolbarViewControllerEvents.SWITCH_TOOL, Tool.RECTANGLE);
-	};
+	private changeTool(tool: Tool, isTemporary = false) {
+		if (tool === this.toolbarModel.activeTool) return;
+		if (isTemporary) this.toolbarModel.lastTool = this.toolbarModel.activeTool;
+
+		this.toolbarModel.activeTool = tool;
+		this.toolbarView.setTool(tool, true);
+		eventBus.emit(ToolbarViewControllerEvents.SWITCH_TOOL, tool);
+	}
 }
