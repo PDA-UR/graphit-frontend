@@ -1,5 +1,5 @@
 import { GraphModel } from "./GraphModel";
-import cytoscape from "cytoscape";
+import cytoscape, { Core } from "cytoscape";
 import { View } from "../../../../shared/ui/View";
 
 import interestedNormal from "../../icons/interested_normal.svg";
@@ -58,7 +58,7 @@ export enum GraphViewEvents {
 }
 
 export class GraphView extends View {
-	private readonly cy: any;
+	private readonly cy: Core;
 
 	private readonly $container: HTMLElement;
 

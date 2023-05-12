@@ -17,6 +17,7 @@ export class GraphController {
 	private readonly graphModel: GraphModel;
 
 	constructor(elements: ElementDefinition[]) {
+		console.log("GraphController");
 		this.graphModel = elements;
 		this.graphView = new GraphView(
 			this.graphModel,
@@ -26,6 +27,7 @@ export class GraphController {
 			}
 		);
 
+		console.log("GraphController done view");
 		this.switchTool(DEFAULT_TOOL);
 
 		this.graphView.addListener(
@@ -42,6 +44,7 @@ export class GraphController {
 			PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
 			this.onEditPropertyActionClicked
 		);
+		console.log("GraphController done");
 	}
 
 	private switchTool = (tool: string) => {
