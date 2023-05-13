@@ -23,6 +23,11 @@
 	opacity: 1;
 }
 
+.property.base-item {
+	display: flex;
+	gap: 5px;
+}
+
 #toolbar > #grab {
 	background-image: url("../../icons/grab_normal.svg");
 }

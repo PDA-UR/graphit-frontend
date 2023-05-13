@@ -23,34 +23,50 @@ export class PropertyModalController {
 
 		this.propertyModalView.addListener(
 			PropertyModalViewEvents.COMPLETE_BUTTON_CLICK,
-			eventBus.emit.bind(
-				eventBus,
-				PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
-				PropertyEditAction.COMPLETE
-			)
+			this.onCompletionActionClicked
 		);
 		this.propertyModalView.addListener(
 			PropertyModalViewEvents.INTEREST_BUTTON_CLICK,
-			eventBus.emit.bind(
-				eventBus,
-				PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
-				PropertyEditAction.INTEREST
-			)
+			this.onInterestActionClicked
 		);
 		this.propertyModalView.addListener(
 			PropertyModalViewEvents.RATE_BUTTON_CLICK,
-			eventBus.emit.bind(
-				eventBus,
-				PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
-				PropertyEditAction.RATE
-			)
+			this.onRateActionClicked
 		);
+
+		// listen to keys 1 - 3
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "1") this.onCompletionActionClicked();
+			else if (event.key === "2") this.onInterestActionClicked();
+			else if (event.key === "3") this.onRateActionClicked();
+		});
 
 		eventBus.addListener(
 			PropertyModalControllerEvents.SET_PROPERTY_MODAL_VISIBILITY,
 			this.onSetPropertyModalVisibility
 		);
 	}
+
+	private onCompletionActionClicked = () => {
+		eventBus.emit(
+			PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
+			PropertyEditAction.COMPLETE
+		);
+	};
+
+	private onInterestActionClicked = () => {
+		eventBus.emit(
+			PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
+			PropertyEditAction.INTEREST
+		);
+	};
+
+	private onRateActionClicked = () => {
+		eventBus.emit(
+			PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
+			PropertyEditAction.RATE
+		);
+	};
 
 	private onSetPropertyModalVisibility = (isVisible: boolean) => {
 		if (isVisible) this.propertyModalView.show();
