@@ -1,19 +1,11 @@
-import { Core } from "cytoscape";
-import { Action } from "./Action";
-import { WikibaseAction } from "./WikibaseAction";
+import { PropertyAction } from "./PropertyAction";
 
-export class EditPropertyAction extends WikibaseAction {
-	private readonly cy: Core;
-	private readonly elementId: string;
-	private readonly propertyName: string;
+export class EditPropertyAction extends PropertyAction {
 	private readonly newValue: any;
 	private readonly oldValue: any;
 
 	constructor(cy: any, elementId: string, propertyName: string, newValue: any) {
-		super();
-		this.cy = cy;
-		this.elementId = elementId;
-		this.propertyName = propertyName;
+		super(cy, elementId, propertyName);
 		this.newValue = newValue;
 		this.oldValue = cy.$id(elementId).data(propertyName);
 	}
@@ -23,14 +15,6 @@ export class EditPropertyAction extends WikibaseAction {
 	}
 	undo(): void {
 		this.cy.$id(this.elementId).data(this.propertyName, this.oldValue);
-	}
-	isOverriddenBy(action: Action): boolean {
-		if (!(action instanceof EditPropertyAction)) return false;
-		const otherAction = action as EditPropertyAction;
-		return (
-			this.elementId === otherAction.elementId &&
-			this.propertyName === otherAction.propertyName
-		);
 	}
 
 	getWikibaseAction() {

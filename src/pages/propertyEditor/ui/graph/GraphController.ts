@@ -11,6 +11,11 @@ import {
 	PropertyEditAction,
 	PropertyModalControllerEvents,
 } from "../propertyModal/PropertyModalController";
+import lasso from "../../../../shared/extensions/lasso-rectangle/lasso";
+import undo from "../../../../shared/extensions/undo/undo";
+import { EditPropertyAction } from "../../../../shared/extensions/undo/actions/EditPropertyAction";
+import { CompositeAction } from "../../../../shared/extensions/undo/actions/CompositeAction";
+import { TogglePropertyAction } from "../../../../shared/extensions/undo/actions/TogglePropertyAction";
 
 export class GraphController {
 	private readonly graphView: GraphView;
@@ -23,7 +28,7 @@ export class GraphController {
 			this.graphModel,
 			document.getElementById("app")!,
 			{
-				extensions: [dagre, nodeHtmlLabel],
+				extensions: [dagre, nodeHtmlLabel, lasso, undo],
 			}
 		);
 
@@ -45,6 +50,18 @@ export class GraphController {
 			this.onEditPropertyActionClicked
 		);
 		console.log("GraphController done");
+
+		// listen to z key
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "z") {
+				console.log("undo");
+				this.graphView.undo();
+			}
+			if (event.key === "y") {
+				console.log("redo");
+				this.graphView.redo();
+			}
+		});
 	}
 
 	private switchTool = (tool: string) => {
@@ -60,6 +77,21 @@ export class GraphController {
 
 	private onEditPropertyActionClicked = (action: PropertyEditAction) => {
 		console.log(action);
+		if (action === PropertyEditAction.COMPLETE) {
+			const selectedNodes = this.graphView.getSelectedNodes(),
+				selectedNodeIds = selectedNodes.map((node) => node.id()),
+				propertyName = "completed",
+				cy = this.graphView.getCy(),
+				actions = selectedNodeIds.map((nodeId) => {
+					return new TogglePropertyAction(cy, nodeId, propertyName, [
+						"true",
+						"false",
+					]);
+				}),
+				compositeAction = new CompositeAction(actions);
+
+			this.graphView.do(compositeAction);
+		}
 	};
 
 	private onSelectionChanged = (selectionCount: number) => {

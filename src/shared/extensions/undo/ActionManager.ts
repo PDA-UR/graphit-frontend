@@ -1,4 +1,6 @@
-import { Action } from "./Action";
+import { Action } from "./actions/Action";
+import { CompositeAction } from "./actions/CompositeAction";
+import { WikibaseAction } from "./actions/WikibaseAction";
 
 export class ActionManager {
 	private readonly undoStack: Action[] = [];
@@ -26,18 +28,22 @@ export class ActionManager {
 		return action;
 	}
 
-	compressUndoStack(): void {
-		const sumWithInitial = this.undoStack
-			.reverse()
-			.reduce(this.compressReducer, []);
+	getWikibaseActions(): CompositeAction {
+		return this.undoStack
+			.filter((a) => a instanceof WikibaseAction)
+			.reduce(this.compressReducer, new CompositeAction([])) as CompositeAction;
 	}
 
-	private compressReducer(acc: Action[], action: Action): Action[] {
-		// only add an action if it is not overridden by any of the previous actions
-		if (!acc.some((a) => a.isOverriddenBy(action))) {
-			acc.push(action);
+	private compressReducer(
+		acc: CompositeAction,
+		action: Action
+	): CompositeAction {
+		const mergedAction = acc.merge(action);
+		if (mergedAction instanceof CompositeAction) {
+			return mergedAction;
+		} else {
+			return new CompositeAction([mergedAction]);
 		}
-		return acc;
 	}
 
 	getUndoStack(): Action[] {

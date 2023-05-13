@@ -3,6 +3,8 @@ import cytoscape, { Core } from "cytoscape";
 import { View } from "../../../../shared/ui/View";
 
 import interestedNormal from "../../icons/interested_normal.svg";
+import { ActionManager } from "../../../../shared/extensions/undo/ActionManager";
+import { Action } from "../../../../shared/extensions/undo/actions/Action";
 
 export interface GraphViewOptions extends cytoscape.CytoscapeOptions {
 	extensions?: any[];
@@ -59,8 +61,8 @@ export enum GraphViewEvents {
 
 export class GraphView extends View {
 	private readonly cy: Core;
-
 	private readonly $container: HTMLElement;
+	private readonly actionManager: ActionManager;
 
 	constructor(
 		model: GraphModel,
@@ -88,6 +90,10 @@ export class GraphView extends View {
 				tpl: this.getBadge,
 			},
 		]);
+
+		(this.cy as any).lassoSelectionEnabled(true);
+		this.actionManager = (this.cy as any).undoRedo();
+		console.log(this.actionManager);
 
 		this.cy.on("select", "node", (event: any) => {
 			const numSelectedNodes = this.cy.$(":selected").length;
@@ -137,5 +143,25 @@ export class GraphView extends View {
 
 	setMouseMode() {
 		this.toggleGrabMode(false);
+	}
+
+	getSelectedNodes() {
+		return this.cy.$(":selected");
+	}
+
+	getCy() {
+		return this.cy;
+	}
+
+	do(action: Action) {
+		this.actionManager.do(action);
+	}
+
+	undo(): Action | null {
+		return this.actionManager.undo();
+	}
+
+	redo(): Action | null {
+		return this.actionManager.redo();
 	}
 }

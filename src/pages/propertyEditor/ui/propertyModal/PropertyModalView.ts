@@ -37,15 +37,18 @@ export class PropertyModalView extends View {
 		this.$rateButton.addEventListener("click", this.onRateButtonClick);
 	}
 
-	private onCompleteButtonClick = () => {
+	private onCompleteButtonClick = (event: MouseEvent) => {
+		event.stopPropagation();
 		this.emit(PropertyModalViewEvents.COMPLETE_BUTTON_CLICK);
 	};
 
-	private onInterestButtonClick = () => {
+	private onInterestButtonClick = (event: MouseEvent) => {
+		event.stopPropagation();
 		this.emit(PropertyModalViewEvents.INTEREST_BUTTON_CLICK);
 	};
 
-	private onRateButtonClick = () => {
+	private onRateButtonClick = (event: MouseEvent) => {
+		event.stopPropagation();
 		this.emit(PropertyModalViewEvents.RATE_BUTTON_CLICK);
 	};
 

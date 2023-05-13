@@ -1,7 +1,9 @@
+import { CompositeAction } from "./CompositeAction";
+
 export abstract class Action {
 	abstract do(): void;
 
 	abstract undo(): void;
 
-	abstract isOverriddenBy(action: Action): boolean;
+	abstract merge(action: Action): CompositeAction | Action;
 }
