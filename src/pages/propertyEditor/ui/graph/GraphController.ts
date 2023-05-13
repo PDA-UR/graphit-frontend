@@ -76,26 +76,62 @@ export class GraphController {
 	};
 
 	private onEditPropertyActionClicked = (action: PropertyEditAction) => {
-		console.log(action);
-		if (action === PropertyEditAction.COMPLETE) {
-			const selectedNodes = this.graphView.getSelectedNodes(),
-				selectedNodeIds = selectedNodes.map((node) => node.id()),
-				propertyName = "completed",
-				cy = this.graphView.getCy(),
-				actions = selectedNodeIds.map((nodeId) => {
-					return new TogglePropertyAction(cy, nodeId, propertyName, [
-						"true",
-						"false",
-					]);
-				}),
-				compositeAction = new CompositeAction(actions);
+		if (action === PropertyEditAction.COMPLETE)
+			this.onCompletedPropertyClicked();
+		else if (action === PropertyEditAction.INTEREST)
+			this.onInterestedPropertyClicked();
+	};
 
-			this.graphView.do(compositeAction);
-		}
+	private onCompletedPropertyClicked = () => {
+		const selectedNodes = this.graphView.getSelectedNodes(),
+			selectedNodeIds = selectedNodes.map((node) => node.id()),
+			propertyName = "completed",
+			numCompleted = selectedNodes.filter((node) => {
+				return node.data("completed") === "true";
+			}).length,
+			numUncompleted = selectedNodes.filter((node) => {
+				console.log(node.data("completed"), node.data("completed") === "false");
+				return node.data("completed") === "false";
+			}).length,
+			newValue = numCompleted > numUncompleted ? "false" : "true",
+			cy = this.graphView.getCy(),
+			actions = selectedNodeIds.map((nodeId) => {
+				return new EditPropertyAction(cy, nodeId, propertyName, newValue);
+			}),
+			compositeAction = new CompositeAction(actions);
+
+		console.log(
+			"fond ",
+			numCompleted,
+			" completed and ",
+			numUncompleted,
+			" uncompleted so setting to ",
+			newValue
+		);
+		this.graphView.do(compositeAction);
+	};
+
+	private onInterestedPropertyClicked = () => {
+		const selectedNodes = this.graphView.getSelectedNodes(),
+			selectedNodeIds = selectedNodes.map((node) => node.id()),
+			numInterested = selectedNodes.filter((node) => {
+				return node.data("interested") === "true";
+			}).length,
+			numUninterested = selectedNodes.filter((node) => {
+				return node.data("interested") === "false";
+			}).length,
+			propertyName = "interested",
+			newValue = numInterested > numUninterested ? "false" : "true",
+			cy = this.graphView.getCy(),
+			actions = selectedNodeIds.map((nodeId) => {
+				return new EditPropertyAction(cy, nodeId, propertyName, newValue);
+			}),
+			compositeAction = new CompositeAction(actions);
+
+		this.graphView.do(compositeAction);
 	};
 
 	private onSelectionChanged = (selectionCount: number) => {
-		console.log("CHANGED to ", selectionCount);
 		if (selectionCount === 0)
 			eventBus.emit(
 				PropertyModalControllerEvents.SET_PROPERTY_MODAL_VISIBILITY,
