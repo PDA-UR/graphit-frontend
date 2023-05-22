@@ -1,5 +1,7 @@
 import wke from 'wikibase-edit';
 
+const GRAPHIT_API_ENDPOINT = "https://graphit.ur.de/w/api.php";
+
 // Configures wikibase-edit
 
 export class ConfigHandler {
@@ -34,6 +36,15 @@ export class ConfigHandler {
             //userAgent: 'graphIT (https://graph.graphit.ur.de)',
         }
 
+
+        //----------- TEST WITH PROJEKTARBEIT: --------------
+
+        //newWBEntryWithTitle("Test Edit");
+
+        
+
+        // --------------------------------------------------
+
         this.wbEdit = wke(generalConfig);
         //+= '&origin=*';
 
@@ -54,4 +65,6 @@ export class ConfigHandler {
         }
     }
 
+
 }
+
