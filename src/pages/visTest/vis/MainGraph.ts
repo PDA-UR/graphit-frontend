@@ -25,15 +25,23 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
             'border-color': "#666",
             'width': nodeSize,
             'height': nodeSize,
-        }
-    },
-    // Colors nodes based on the nodeClassLabel inside node
-    // Short attempt at Clustering Node
-        { selector: 'node[nodeClassLabel = "Colors"]',
+            }
+        },
+        // Colors nodes based on the nodeClassLabel inside node
+        // Short attempt at Clustering Node
+        { selector: 'node[nodeClassLabel = "Color"]',
         style: {
             'background-color': 'blue',
-        }
-    }
+            }
+        },
+        // Parents:
+        { selector: ':parent',
+        style : {
+            'background-opacity': 0.333,
+            'border-color': 'red'
+            }
+        },
+
     ]
 };
 
@@ -51,7 +59,16 @@ export class MainGraph {
             elements: model,
             ...DEFAULT_OPTIONS,
         });
+        //this.initParentNodes();
     };
+
+    //?
+    //Try: element.move();
+    // change the default name of nodeClassLabel to be able to use parents in graph
+    /*private initParentNodes(){
+        this.cy.nodes().data("nodeClassLabel", "parent"); //Changes value of nodeClassLabel
+        console.log("cy-data: ", this.cy.nodes().data());
+    }*/
 
     public switchLayout = (option: string) => {
         console.log("switch Layout: ", option);

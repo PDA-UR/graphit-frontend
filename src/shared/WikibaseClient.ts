@@ -20,6 +20,7 @@ export default class WikibaseClient {
 
 	async getDependentsAndDependencies(): Promise<ElementDefinition[]> {
 		const results = await this.sparqlClient.getDependentsAndDependencies();
+		console.log("results: ", results);
 		const graph = this.sparqlParser.parsePairs(
 			["source", "dependency"],
 			"depends on",
@@ -27,4 +28,5 @@ export default class WikibaseClient {
 		);
 		return graph;
 	}
+
 }

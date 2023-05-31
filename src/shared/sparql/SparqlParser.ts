@@ -68,8 +68,8 @@ export class SparqlParser {
 	): ElementDefinition[] {
 		const nodes: ElementDefinition[] = [];
 
-		const bindings = results.results.bindings;
-		const vars = results.head.vars;
+		const bindings = results.results.bindings; // all query result objects
+		const vars = results.head.vars; // e.g. "source", "sourceLabel"
 
 		bindings.forEach((binding) => {
 			nodePrefixes.forEach((prefix) => {
@@ -83,7 +83,6 @@ export class SparqlParser {
 				}
 			});
 		});
-
 		return nodes;
 	}
 
@@ -126,18 +125,21 @@ export class SparqlParser {
 
 		for (const variable of vars) {
 			if (!variable.startsWith(prefix)) continue;
-			let key = variable.slice(prefix.length);
+			let key = variable.slice(prefix.length); // slices of e.g. "source" from sourceLabel
 			if (key === "") key = "id";
-			// lowercase first letter
+			// Rename to use cy's compound graph
+			// if (key === "NodeClassLabel") key = "parent"; // Geht nur im parser
 			key = key.charAt(0).toLowerCase() + key.slice(1);
 
 			const value = binding[variable]?.value;
 
 			if (value) node.data[key] = value;
+
 		}
 
 		if (node.data.label === "Color Models") console.log(node);
 
 		return node.data.id ? node : null;
 	}
+
 }
