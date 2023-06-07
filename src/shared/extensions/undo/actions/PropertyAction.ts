@@ -2,7 +2,6 @@ import { Core } from "cytoscape";
 import { Action } from "./Action";
 import { WikibaseAction } from "./WikibaseAction";
 import { CompositeAction } from "./CompositeAction";
-import { EditPropertyAction } from "./EditPropertyAction";
 
 export abstract class PropertyAction extends WikibaseAction {
 	protected readonly cy: Core;
@@ -16,7 +15,7 @@ export abstract class PropertyAction extends WikibaseAction {
 		this.propertyName = propertyName;
 	}
 
-	isOverriddenBy(action: Action): boolean {
+	isOverriddenBy(action: WikibaseAction): boolean {
 		if (!(action instanceof PropertyAction)) {
 			return false;
 		}
@@ -30,7 +29,9 @@ export abstract class PropertyAction extends WikibaseAction {
 		throw new Error("Method not implemented.");
 	}
 
-	merge(action: Action): CompositeAction | Action {
+	merge(
+		action: WikibaseAction
+	): CompositeAction<WikibaseAction> | WikibaseAction {
 		if (this.isOverriddenBy(action)) {
 			return action;
 		}

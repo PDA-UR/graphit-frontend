@@ -15,7 +15,6 @@ import lasso from "../../../../shared/extensions/lasso-rectangle/lasso";
 import undo from "../../../../shared/extensions/undo/undo";
 import { EditPropertyAction } from "../../../../shared/extensions/undo/actions/EditPropertyAction";
 import { CompositeAction } from "../../../../shared/extensions/undo/actions/CompositeAction";
-import { TogglePropertyAction } from "../../../../shared/extensions/undo/actions/TogglePropertyAction";
 
 export class GraphController {
 	private readonly graphView: GraphView;

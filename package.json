@@ -5,7 +5,7 @@
 	"type": "module",
 	"scripts": {
 		"dev": "vite",
-		"build:dev": "tsc && vite build",
+		"build:dev": "tsc && vite build --mode development",
 		"build:test": "tsc && vite build",
 		"build:prod": "tsc && vite build",
 		"preview": "vite preview"
@@ -27,7 +27,7 @@
 		"cytoscape-node-html-label": "^1.2.2",
 		"events": "^3.3.0",
 		"point-in-polygon": "^1.1.0",
-		"wikibase-edit-browser": "^5.3.3",
+		"wikibase-edit-browser": "^5.3.5",
 		"wikibase-sdk": "^9.1.2"
 	}
 }

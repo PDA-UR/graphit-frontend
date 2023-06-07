@@ -5,9 +5,11 @@ import { ToolbarViewController } from "./ui/toolbar/ToolbarController";
 import { PropertyModalController } from "./ui/propertyModal/PropertyModalController";
 import WikibaseClient from "../../shared/WikibaseClient";
 import { state } from "./global/State";
+import { getCredentials } from "../../shared/util/GetCredentials";
 
 async function main() {
-	const wikibase = new WikibaseClient();
+	const credentials = getCredentials();
+	const wikibase = new WikibaseClient(credentials);
 	const elements = await wikibase.getDependentsAndDependencies();
 	console.log("property modal controller!");
 	const propertyModalController = new PropertyModalController();

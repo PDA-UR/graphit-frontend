@@ -1,5 +1,7 @@
 // vite.config.js
-export default {
+import { defineConfig } from 'vite';
+
+export default defineConfig({
 	// config options
 	build: {
 		outDir: "dist",
@@ -15,4 +17,7 @@ export default {
 			},
 		},
 	},
-};
+	define: {
+		APP_VERSION: JSON.stringify(process.env.npm_package_version),
+	  },
+});
