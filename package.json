@@ -27,6 +27,7 @@
 		"cytoscape-node-html-label": "^1.2.2",
 		"events": "^3.3.0",
 		"point-in-polygon": "^1.1.0",
+		"wikibase-edit-browser": "^5.3.3",
 		"wikibase-sdk": "^9.1.2"
 	}
 }
