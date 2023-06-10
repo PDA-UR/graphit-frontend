@@ -1,5 +1,4 @@
 import { Core } from "cytoscape";
-import { Action } from "./Action";
 import { WikibaseAction } from "./WikibaseAction";
 import { CompositeAction } from "./CompositeAction";
 
@@ -23,10 +22,6 @@ export abstract class PropertyAction extends WikibaseAction {
 			this.elementId === action.elementId &&
 			this.propertyName === action.propertyName
 		);
-	}
-
-	getWikibaseAction() {
-		throw new Error("Method not implemented.");
 	}
 
 	merge(

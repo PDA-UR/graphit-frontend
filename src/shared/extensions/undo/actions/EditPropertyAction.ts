@@ -1,3 +1,5 @@
+import WikibaseClient from "../../../WikibaseClient";
+import { EditAction } from "../other/EditAction";
 import { PropertyAction } from "./PropertyAction";
 
 export class EditPropertyAction extends PropertyAction {
@@ -17,7 +19,11 @@ export class EditPropertyAction extends PropertyAction {
 		this.cy.$id(this.elementId).data(this.propertyName, this.oldValue);
 	}
 
-	getWikibaseAction() {
+	editAction(client: WikibaseClient) {
 		throw new Error("Method not implemented.");
+	}
+
+	getEditAction(client: WikibaseClient): EditAction {
+		return () => this.editAction(client) as any	;
 	}
 }
