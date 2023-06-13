@@ -20,13 +20,25 @@ export default class WikibaseClient {
 
 	async getDependentsAndDependencies(): Promise<ElementDefinition[]> {
 		const results = await this.sparqlClient.getDependentsAndDependencies();
-		console.log("results: ", results);
+		// get categories
+		//const categories = await this.sparqlClient.getCategories();
+		// console.log("Client-results ", results);
 		const graph = this.sparqlParser.parsePairs(
 			["source", "dependency"],
 			"depends on",
 			results
 		);
+		// console.log("graph", graph);
+		// HIER: categorys parsen + zu graph hinzufügen
+		// hier: checken, dass parent gesetzt wird, bevor es weitergeht?
+
 		return graph;
+	}
+
+	async getCategories(): Promise<ElementDefinition[]> {
+		const results = await this.sparqlClient.getCategories();
+		const parents = this.sparqlParser.parseParents(results);
+		return parents;
 	}
 
 }

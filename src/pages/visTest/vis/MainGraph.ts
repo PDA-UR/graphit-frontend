@@ -29,16 +29,18 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
         },
         // Colors nodes based on the nodeClassLabel inside node
         // Short attempt at Clustering Node
-        { selector: 'node[nodeClassLabel = "Color"]',
+        { selector: 'edge',
         style: {
-            'background-color': 'blue',
+            'target-arrow-shape': 'triangle',
+            'curve-style': 'straight'
             }
         },
         // Parents:
         { selector: ':parent',
         style : {
             'background-opacity': 0.333,
-            'border-color': 'red'
+            'border-color': 'blue',
+            'label': 'data(id)'
             }
         },
 
@@ -77,9 +79,12 @@ export class MainGraph {
                 this.cy.layout(layoutOps.fcoseOptions).run();
                 break;
             case "breadth":
+                //try: disable parent for this layout
+                //this.cy.elements().noded().toggleClass("noparent", true);
                 this.cy.layout(layoutOps.breadthOptions).run();
                 break;
             case "concentric":
+                //this.cy.elements().toggleClass("noparent", true);
                 this.cy.layout(layoutOps.concOptions).run();
                 break;
             default:

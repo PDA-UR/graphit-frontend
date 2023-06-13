@@ -44,16 +44,17 @@ WHERE {
 
 `;
 
-// TEST: Renames ?source/dependencyNodeClassLabel
+// Rename ?source/dependencyNodeClassLabel
+// PROBLEM: drops ?sourceLabel for some reason
 export const dependentsAndDependenciesQuery2 = (
 	userId = "Q157"
 ) => `PREFIX wd: <https://graphit.ur.de/entity/>
 PREFIX wdt: <https://graphit.ur.de/prop/direct/>
 SELECT 
-  ?source ?sourceLabel 
+  ?source ?sourceLabel
   ?sourceNodeClass (?sourceNodeClassLabel AS ?sourceParent) ?sourceNodeImage 
   ?dependency ?dependencyLabel
-  ?dependencyNodeClass (?dependencyNodeClassLabel AS ?dependencyParent) ?dependencyNodeImage
+  ?dependencyNodeClass ?dependencyNodeClassLabel ?dependencyNodeImage
   ?sourceCompleted ?dependencyCompleted
   ?sourceInterested ?dependencyInterested
 WHERE {
@@ -86,8 +87,36 @@ WHERE {
   
   # Retrieve labels for all entities in the preferred language (fallback to English)
   SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
-  ?sourceNodeClass rdfs:label ?sourceNodeClassLabel.
-  ?dependencyNodeClass rdfs:label ?dependencyNodeClassLabel.}
+    ?sourceNodeClass rdfs:label ?sourceNodeClassLabel.
+    ?dependencyNodeClass rdfs:label ?dependencyNodeClassLabel.}
 }
 
 `;
+
+
+// Separate SPARQL-Query for getting category nodes
+export const categoriesQuery = () => `#defaultView:Graph
+PREFIX wd: <https://graphit.ur.de/entity/>
+PREFIX wdt: <https://graphit.ur.de/prop/direct/>
+SELECT ?itemLabel
+  WHERE {
+  # Retrieve all items that are an instance of (P3) a category (Q169)
+  ?item wdt:P3 wd:Q169
+
+  # Retrieve labels for all entities in the preferred language (fallback to English)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".}
+}`;
+
+/*
+export const categoriesQuery = () => `#defaultView:Graph
+PREFIX wd: <https://graphit.ur.de/entity/>
+PREFIX wdt: <https://graphit.ur.de/prop/direct/>
+SELECT (?item AS ?parentItem) (?itemLabel AS ?parentItemLabel) 
+  WHERE {
+  # Retrieve all items that are an instance of (P3) a category (Q169)
+  ?item wdt:P3 wd:Q169
+
+  # Retrieve labels for all entities in the preferred language (fallback to English)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en".
+    ?parentItem rdfs:label ?parentItemLabel.}
+}`;*/
