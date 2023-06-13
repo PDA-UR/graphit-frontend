@@ -1,4 +1,4 @@
-import cytoscape from "cytoscape";
+import cytoscape, { Collection } from "cytoscape";
 //import fcose from "cytoscape-fcose";
 import { GraphViewOptions } from "../../propertyEditor/ui/graph/GraphView";
 import { ElementDefinition } from "cytoscape";
@@ -37,10 +37,17 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
         },
         // Parents:
         { selector: ':parent',
-        style : {
+        style: {
             'background-opacity': 0.333,
             'border-color': 'blue',
             'label': 'data(id)'
+            }
+        },
+        { selector: '.hide',
+        style: {
+            'background-opacity': 0,
+            'border-width': 0,
+            'label': ''
             }
         },
 
@@ -50,6 +57,7 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
 export class MainGraph {
     private readonly cy: any;
     private readonly $container: HTMLElement;
+    private readonly collection: Collection;
     
     constructor(
         model: ElementDefinition[],
@@ -61,35 +69,46 @@ export class MainGraph {
             elements: model,
             ...DEFAULT_OPTIONS,
         });
-        //this.initParentNodes();
+        this.cy.$("edge").unselectify(); // Make edges immutable
+        this.collection = this.cy.collection(this.cy.$("*")); // Full graph
     };
-
-    //?
-    //Try: element.move();
-    // change the default name of nodeClassLabel to be able to use parents in graph
-    /*private initParentNodes(){
-        this.cy.nodes().data("nodeClassLabel", "parent"); //Changes value of nodeClassLabel
-        console.log("cy-data: ", this.cy.nodes().data());
-    }*/
 
     public switchLayout = (option: string) => {
         console.log("switch Layout: ", option);
         switch (option) {
             case "fcose":
+                this.toggleParentVisibility(true)
                 this.cy.layout(layoutOps.fcoseOptions).run();
                 break;
             case "breadth":
-                //try: disable parent for this layout
-                //this.cy.elements().noded().toggleClass("noparent", true);
+                this.toggleParentVisibility(false);
                 this.cy.layout(layoutOps.breadthOptions).run();
                 break;
             case "concentric":
-                //this.cy.elements().toggleClass("noparent", true);
+                this.toggleParentVisibility(false);
                 this.cy.layout(layoutOps.concOptions).run();
                 break;
             default:
                 this.cy.layout(DEFAULT_OPTIONS).run();
         }
     };
+
+    // Geht -> Lässt sich nicht/schwierig umkehren
+    // Evtl. interessant
+    private removeParents() {
+        const parents = this.cy.$(":parent");
+        // Move all nodes outside of parents
+        this.cy.elements().nodes().descendants().move({parent:null});
+        parents.toggleClass("hide", true);
+    }
+
+    private toggleParentVisibility(show:Boolean) {
+        const parents = this.cy.$(":parent");
+        if(show) { // move childs back into parents + remove hide class
+            this.cy.$(":parent").toggleClass("hide", false);
+        } else if (!show) {
+            this.cy.$(":parent").toggleClass("hide", true);
+        }
+    }
 
 }

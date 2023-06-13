@@ -6,7 +6,7 @@ async function main() {
 	const wikibase = new WikibaseClient();
 	const elements = await wikibase.getDependentsAndDependencies();
 	const parents = await wikibase.getCategories();
-	// TODO: make more dynamic for different layouts
+
 	const graph = parents.concat(elements);
 	
 	//console.log(graph);
