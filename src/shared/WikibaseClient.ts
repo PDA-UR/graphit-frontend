@@ -1,6 +1,5 @@
 import { ElementDefinition } from "cytoscape";
-import type { SparqlResults } from "wikibase-sdk";
-import wbEdit from "wikibase-edit-browser";
+import type { EntityId, SparqlResults } from "wikibase-sdk";
 
 import { SparqlClient } from "./sparql/SparqlClient";
 import { SparqlParser } from "./sparql/SparqlParser";
@@ -12,29 +11,19 @@ export default class WikibaseClient {
 	private readonly sparqlParser: SparqlParser;
 	private readonly credentials: Credentials;
 
-	readonly edit: any;
-
 	constructor(credentials: Credentials) {
 		this.credentials = credentials;
 		this.sparqlClient = new SparqlClient();
 		this.sparqlParser = new SparqlParser();
-		this.edit = wbEdit(wikibaseEditConfig(this.credentials));
 	}
 
-	async hasValidCredentials(): Promise<boolean> {
-		try {
-			const getAuthData = await this.edit.getAuthData(),
-				authData = await getAuthData();
-			console.log("getAuthData", getAuthData);
-			return true;
-		} catch (error) {
-			console.log("error", error);
-			return false;
-		}
-	}
 	async query(query: string): Promise<SparqlResults> {
 		const results = await this.sparqlClient.query(query);
 		return results;
+	}
+
+	async getEntities(ids: EntityId[]): Promise<SparqlResults> {
+		return await this.sparqlClient.getEntities(ids);
 	}
 
 	async getDependentsAndDependencies(): Promise<ElementDefinition[]> {
@@ -63,6 +52,7 @@ export default class WikibaseClient {
 
 		try {
 			const response = await fetch(url);
+			console.log("response", url, response);
 			const json = await response.json();
 			return json.parse.wikitext;
 		} catch (error) {
@@ -74,10 +64,8 @@ export default class WikibaseClient {
 	async parseUserItemId(userPageContent: string): Promise<string> {
 		const regex = /\[\[Item:Q\d+(\|.*)?\]\]/g;
 
-		console.log("htmlUserPage", userPageContent);
 		const matches = userPageContent.match(regex);
 		if (matches) {
-			console.log("matches", matches);
 			const userId = matches[0]
 				.replace("[[Item:", "")
 				.replace("]]", "")

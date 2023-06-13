@@ -164,4 +164,12 @@ export class GraphView extends View {
 	redo(): Action | null {
 		return this.actionManager.redo();
 	}
+
+	getWikibaseActions() {
+		return this.actionManager.getWikibaseActions();
+	}
+
+	clearActions() {
+		this.actionManager.clear();
+	}
 }

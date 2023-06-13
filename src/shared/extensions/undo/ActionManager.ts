@@ -28,18 +28,28 @@ export class ActionManager {
 		return action;
 	}
 
-	getWikibaseActions(): CompositeAction {
+	getWikibaseActions(): CompositeAction<WikibaseAction> {
+		console.log("compressing", this.undoStack);
 		return this.undoStack
-			.filter((a) => a instanceof WikibaseAction)
-			.reduce(this.compressReducer, new CompositeAction([])) as CompositeAction;
+			.filter(
+				(a) =>
+					a instanceof WikibaseAction ||
+					a instanceof CompositeAction<WikibaseAction>
+			)
+			.reduce(
+				this.compressReducer,
+				new CompositeAction([])
+			) as CompositeAction<WikibaseAction>;
 	}
 
 	private compressReducer(
-		acc: CompositeAction,
+		acc: CompositeAction<WikibaseAction>,
 		action: Action
-	): CompositeAction {
+	): CompositeAction<WikibaseAction> {
+		console.log("merging", acc, action);
 		const mergedAction = acc.merge(action);
-		if (mergedAction instanceof CompositeAction) {
+		if (mergedAction == null) return acc;
+		else if (mergedAction instanceof CompositeAction) {
 			return mergedAction;
 		} else {
 			return new CompositeAction([mergedAction]);
@@ -52,5 +62,10 @@ export class ActionManager {
 
 	getRedoStack(): Action[] {
 		return this.redoStack;
+	}
+
+	clear(): void {
+		this.undoStack.length = 0;
+		this.redoStack.length = 0;
 	}
 }

@@ -23,13 +23,4 @@ export abstract class PropertyAction extends WikibaseAction {
 			this.propertyName === action.propertyName
 		);
 	}
-
-	merge(
-		action: WikibaseAction
-	): CompositeAction<WikibaseAction> | WikibaseAction {
-		if (this.isOverriddenBy(action)) {
-			return action;
-		}
-		return new CompositeAction([this, action]);
-	}
 }

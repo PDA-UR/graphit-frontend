@@ -1,4 +1,4 @@
-import type { SparqlResults } from "wikibase-sdk";
+import type { EntityId, SparqlResults } from "wikibase-sdk";
 import { state } from "../../pages/propertyEditor/global/State";
 import QueryDispatcher from "./QueryDispatcher";
 import { dependentsAndDependenciesQuery } from "./SparqlQueries";
@@ -13,6 +13,10 @@ export class SparqlClient {
 
 	async query(query: string): Promise<SparqlResults> {
 		return this.queryDispatcher.query(query);
+	}
+
+	async getEntities(ids: EntityId[]): Promise<SparqlResults> {
+		return this.queryDispatcher.getEntities(ids);
 	}
 
 	// ~~~~~~~~~~ Pre built queries: ~~~~~~~~~ //

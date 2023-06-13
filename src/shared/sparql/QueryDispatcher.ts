@@ -1,10 +1,15 @@
-import { Wbk, WBK } from "wikibase-sdk";
+import { EntityId, Wbk, WBK } from "wikibase-sdk";
 import type { SparqlResults } from "wikibase-sdk";
+import { getEnvVar } from "../util/Env";
 
 // Dont use this class directly, use the SparqlClient class instead
 
+const instance = getEnvVar("VITE_WIKIBASE_INSTANCE");
+
 export default class QueryDispatcher {
-	private readonly instance = "https://graphit.ur.de";
+	private readonly instance = instance;
+	// private readonly endpoint = `${instance}/proxy/wdqs/bigdata/namespace/wdq/sparql`;
+
 	private readonly endpoint =
 		"https://query.graphit.ur.de/proxy/wdqs/bigdata/namespace/wdq/sparql";
 
@@ -29,6 +34,15 @@ export default class QueryDispatcher {
 		console.log("QueryDispatcher query response", response);
 		const data = await response.json();
 		console.log("QueryDispatcher query data", data);
+		return data;
+	}
+
+	async getEntities(ids: EntityId[]): Promise<SparqlResults> {
+		const url = this.wbk.getEntities({ ids });
+		const headers = {};
+
+		const response = await fetch(url, { headers });
+		const data = await response.json();
 		return data;
 	}
 }

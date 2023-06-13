@@ -136,7 +136,7 @@ export class SparqlParser {
 			if (value) node.data[key] = value;
 		}
 
-		if (node.data.label === "Color Models") console.log(node);
+		node.data._originalData = node.data;
 
 		return node.data.id ? node : null;
 	}

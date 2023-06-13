@@ -1,11 +1,13 @@
-import WikibaseClient from "../../../WikibaseClient";
+import { ApiClient } from "../../../client/ApiClient";
 import { EditAction } from "../other/EditAction";
 import { Action } from "./Action";
 import { CompositeAction } from "./CompositeAction";
 
 export abstract class WikibaseAction extends Action {
-	abstract getEditAction(client: WikibaseClient): EditAction;
-	abstract merge(
-		action: Action
-	): CompositeAction<WikibaseAction> | WikibaseAction;
+	abstract getEditAction(
+		client: ApiClient<unknown>,
+		userEntityId: string
+	): EditAction;
+
+	abstract isOverriddenBy(action: WikibaseAction): boolean;
 }

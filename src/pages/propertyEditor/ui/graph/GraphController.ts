@@ -15,12 +15,21 @@ import lasso from "../../../../shared/extensions/lasso-rectangle/lasso";
 import undo from "../../../../shared/extensions/undo/undo";
 import { EditPropertyAction } from "../../../../shared/extensions/undo/actions/EditPropertyAction";
 import { CompositeAction } from "../../../../shared/extensions/undo/actions/CompositeAction";
+import { SaveButtonEvents } from "../saveButton/SaveButtonView";
+import { ApiClient } from "../../../../shared/client/ApiClient";
 
 export class GraphController {
 	private readonly graphView: GraphView;
 	private readonly graphModel: GraphModel;
 
-	constructor(elements: ElementDefinition[]) {
+	private readonly api: ApiClient<unknown>;
+	private readonly userEntityId: string;
+
+	constructor(
+		elements: ElementDefinition[],
+		api: ApiClient<unknown>,
+		userEntityId: string
+	) {
 		console.log("GraphController");
 		this.graphModel = elements;
 		this.graphView = new GraphView(
@@ -30,6 +39,8 @@ export class GraphController {
 				extensions: [dagre, nodeHtmlLabel, lasso, undo],
 			}
 		);
+		this.api = api;
+		this.userEntityId = userEntityId;
 
 		console.log("GraphController done view");
 		this.switchTool(DEFAULT_TOOL);
@@ -48,6 +59,12 @@ export class GraphController {
 			PropertyModalControllerEvents.EDIT_PROPERTY_ACTION_CLICKED,
 			this.onEditPropertyActionClicked
 		);
+
+		eventBus.addListener(
+			SaveButtonEvents.SAVE_BUTTON_CLICK,
+			this.onSaveButtonClick
+		);
+
 		console.log("GraphController done");
 
 		// listen to z key
@@ -141,5 +158,26 @@ export class GraphController {
 				PropertyModalControllerEvents.SET_PROPERTY_MODAL_VISIBILITY,
 				true
 			);
+	};
+
+	private onSaveButtonClick = () => {
+		const actions = this.graphView.getWikibaseActions();
+		console.log("actions", actions);
+		const editActions = actions.getActions().map((action) => {
+			return action.getEditAction(this.api, this.userEntityId);
+		});
+		const executions = editActions.map((action) => action());
+
+		Promise.all(executions)
+			.then((results) => {
+				console.log("results", results);
+			})
+			.catch((error) => {
+				console.log("error", error);
+			})
+			.finally(() => {
+				console.log("finally");
+			});
+		console.log("editActions", editActions);
 	};
 }
