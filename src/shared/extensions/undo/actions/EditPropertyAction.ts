@@ -1,5 +1,5 @@
 import WikibaseClient from "../../../WikibaseClient";
-import { ApiClient, UpdateClaimModelModel } from "../../../client/ApiClient";
+import { ApiClient, UpdateClaimModel } from "../../../client/ApiClient";
 import {
 	WB_PROPERTIES_DEV,
 	WB_PROPERTIES_PROD,
@@ -51,7 +51,7 @@ export class EditPropertyAction extends PropertyAction {
 			userEntityId
 		);
 
-		const updateClaimAction: UpdateClaimModelModel = {
+		const updateClaimAction: UpdateClaimModel = {
 			id: this.parseElementId(this.elementId),
 			property: propertyId,
 			newValue: this.newValue,

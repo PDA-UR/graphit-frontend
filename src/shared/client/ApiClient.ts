@@ -1,31 +1,50 @@
-export interface CredentialsModelModel {
-	username?: string;
-	password?: string;
+export interface CredentialsModel {
+	/** @minLength 1 */
+	username: string;
+	/** @minLength 1 */
+	password: string;
 }
 
-export interface CreateClaimModelModel {
-	/** @pattern [PQ]\d+ */
-	id?: string;
-	/** @pattern [PQ]\d+ */
-	property?: string;
-	value?: string;
+export interface CreateClaimModel {
+	/**
+	 * @minLength 1
+	 * @pattern [PQ]\d{1,5}
+	 */
+	id: string;
+	/**
+	 * @minLength 1
+	 * @pattern [PQ]\d{1,5}
+	 */
+	property: string;
+	/** @minLength 1 */
+	value: string;
 	rank?: "preferred" | "normal" | "deprecated";
 	qualifiers?: Record<string, any>;
 }
 
-export interface UpdateClaimModelModel {
-	/** @pattern [PQ]\d+ */
-	id?: string;
-	/** @pattern [PQ]\d+ */
-	property?: string;
-	oldValue?: string;
-	newValue?: string;
+export interface UpdateClaimModel {
+	/**
+	 * @minLength 1
+	 * @pattern [PQ]\d{1,5}
+	 */
+	id: string;
+	/**
+	 * @minLength 1
+	 * @pattern [PQ]\d{1,5}
+	 */
+	property: string;
+	/** @minLength 1 */
+	oldValue: string;
+	/** @minLength 1 */
+	newValue: string;
 }
 
-export interface ServerInfoModelModel {
-	wikibaseInstance?: string;
-	isProduction?: boolean;
-	version?: string;
+export interface ServerInfoModel {
+	/** @minLength 1 */
+	wikibaseInstance: string;
+	isProduction: boolean;
+	/** @minLength 1 */
+	version: string;
 }
 
 import axios, {
@@ -194,7 +213,6 @@ export class HttpClient<SecurityDataType = unknown> {
 		) {
 			body = JSON.stringify(body);
 		}
-		console.log("this url", this);
 
 		return this.instance
 			.request({
@@ -230,7 +248,7 @@ export class ApiClient<
 		 * @request GET:/api/auth/whoami
 		 */
 		controllerWhoAmI: (params: RequestParams = {}) =>
-			this.request<CredentialsModelModel, string>({
+			this.request<CredentialsModel, string>({
 				path: `/api/auth/whoami`,
 				method: "GET",
 				format: "json",
@@ -244,10 +262,7 @@ export class ApiClient<
 		 * @name ControllerLogin
 		 * @request POST:/api/auth/login
 		 */
-		controllerLogin: (
-			data: CredentialsModelModel,
-			params: RequestParams = {}
-		) =>
+		controllerLogin: (data: CredentialsModel, params: RequestParams = {}) =>
 			this.request<string, string>({
 				path: `/api/auth/login`,
 				method: "POST",
@@ -279,7 +294,7 @@ export class ApiClient<
 		 * @request POST:/api/edit/claim/create
 		 */
 		claimControllerCreate: (
-			data: CreateClaimModelModel,
+			data: CreateClaimModel,
 			params: RequestParams = {}
 		) =>
 			this.request<string, string>({
@@ -298,7 +313,7 @@ export class ApiClient<
 		 * @request POST:/api/edit/claim/update
 		 */
 		claimControllerUpdate: (
-			data: UpdateClaimModelModel,
+			data: UpdateClaimModel,
 			params: RequestParams = {}
 		) =>
 			this.request<string, string>({
@@ -338,7 +353,7 @@ export class ApiClient<
 		 * @request GET:/api/example/info
 		 */
 		controllerInfo: (params: RequestParams = {}) =>
-			this.request<ServerInfoModelModel, any>({
+			this.request<ServerInfoModel, any>({
 				path: `/api/example/info`,
 				method: "GET",
 				format: "json",
