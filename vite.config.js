@@ -14,6 +14,7 @@ export default defineConfig({
 				home: "./index.html",
 				visTest: "./src/pages/visTest/index.html",
 				propertyEditor: "src/pages/propertyEditor/index.html",
+				selectionTools: "src/pages/selectionTools/index.html",
 			},
 		},
 	},
