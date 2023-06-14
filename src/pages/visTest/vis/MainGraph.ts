@@ -104,7 +104,7 @@ export class MainGraph {
 
     private toggleParentVisibility(show:Boolean) {
         const parents = this.cy.$(":parent");
-        if(show) { // move childs back into parents + remove hide class
+        if(show) {
             this.cy.$(":parent").toggleClass("hide", false);
         } else if (!show) {
             this.cy.$(":parent").toggleClass("hide", true);
