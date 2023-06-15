@@ -8,17 +8,9 @@ async function main() {
 	const parents = await wikibase.getCategories();
 
 	const graph = parents.concat(elements);
-	
-	//console.log(graph);
 
-	// PROBLEM: cy setzt parent-value auf undefined, wenn ein solcher id nicht existiert
-	// -> SOLVED
     const mainViz = new MainViz(graph);
 	
 }
 
 main();
-
-function sleep(milis:any) {
-	return new Promise(resolve => setTimeout(resolve, milis))	
-}

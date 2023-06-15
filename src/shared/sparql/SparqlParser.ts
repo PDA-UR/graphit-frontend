@@ -15,11 +15,8 @@ export class SparqlParser {
 		edgeLabel: string,
 		results: SparqlResults,
 	): ElementDefinition[] {
-		//?? parse parent node separetely = no edges, only label (evtl. more)
 		const nodes = this.parseNodes(nodePrefixes, results);
 		const edges = this.parseEdges(nodePrefixes, edgeLabel, results);
-		// TODO: separete parents form general parser!!
-		//const parents = this.parseParents(categories);
 		return nodes.concat(edges);
 	}
 
@@ -187,7 +184,6 @@ export class SparqlParser {
 
 		for (const variable of vars) {
 			const value = binding[variable]?.value;
-			//console.log("value", value);
 			if (value) parent.data[key] = value;
 		}
 		

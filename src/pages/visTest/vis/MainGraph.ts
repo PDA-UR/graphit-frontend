@@ -17,6 +17,7 @@ const nodeSize = (ele: any) => {
 const DEFAULT_OPTIONS: GraphViewOptions = {
     layout: layoutOps.fcoseOptions,
     style: [
+        // NODES:
         { selector: 'node',
         style: { // Show node with label
             'label': 'data(label)',
@@ -27,15 +28,14 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
             'height': nodeSize,
             }
         },
-        // Colors nodes based on the nodeClassLabel inside node
-        // Short attempt at Clustering Node
+        // EDGES:
         { selector: 'edge',
         style: {
             'target-arrow-shape': 'triangle',
             'curve-style': 'straight'
             }
         },
-        // Parents:
+        // PARENTS:
         { selector: ':parent',
         style: {
             'background-opacity': 0.333,
@@ -43,6 +43,7 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
             'label': 'data(id)'
             }
         },
+        // hide parents in graph
         { selector: '.hide',
         style: {
             'background-opacity': 0,
@@ -57,7 +58,6 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
 export class MainGraph {
     private readonly cy: any;
     private readonly $container: HTMLElement;
-    private readonly collection: Collection;
     
     constructor(
         model: ElementDefinition[],
@@ -70,7 +70,6 @@ export class MainGraph {
             ...DEFAULT_OPTIONS,
         });
         this.cy.$("edge").unselectify(); // Make edges immutable
-        this.collection = this.cy.collection(this.cy.$("*")); // Full graph
     };
 
     public switchLayout = (option: string) => {
@@ -93,14 +92,6 @@ export class MainGraph {
         }
     };
 
-    // Geht -> Lässt sich nicht/schwierig umkehren
-    // Evtl. interessant
-    private removeParents() {
-        const parents = this.cy.$(":parent");
-        // Move all nodes outside of parents
-        this.cy.elements().nodes().descendants().move({parent:null});
-        parents.toggleClass("hide", true);
-    }
 
     private toggleParentVisibility(show:Boolean) {
         const parents = this.cy.$(":parent");
@@ -109,6 +100,7 @@ export class MainGraph {
         } else if (!show) {
             this.cy.$(":parent").toggleClass("hide", true);
         }
+        //this.cy.elements().nodes().descendants().move({parent:null});
     }
 
 }
