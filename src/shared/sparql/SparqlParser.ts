@@ -130,7 +130,10 @@ export class SparqlParser {
 			if (key === "") key = "id";
 			key = key.charAt(0).toLowerCase() + key.slice(1);
 
-			if(variable == "sourceNodeClassLabel") key = "parent"; // to make parents work
+			// To make parents work
+			if(variable == "sourceNodeClassLabel" || variable == "dependencyNodeClassLabel"){
+				key = "parent";
+			}
 
 			const value = binding[variable]?.value;
 

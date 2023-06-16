@@ -117,7 +117,7 @@ export class MainGraph {
     }
 
     // Open-Item-Page-Event
-    public openItemPage = (target:any, timestamp:Date) => { //: type cy-node
+    public openItemPage = (target:any, timestamp:Date) => {
         if(!this.hasFiredEvent) {
             console.log("dbclick on", target);
             if(target.isNode()) {
@@ -126,10 +126,5 @@ export class MainGraph {
             }
         } else this.hasFiredEvent = false;
     };
-
-    private blockPageEvent(timestamp:Date){
-        // check if call has been made in the last 3 seconds
-
-    }
 
 }
