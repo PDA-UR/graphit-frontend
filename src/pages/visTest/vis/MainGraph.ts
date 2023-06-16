@@ -1,11 +1,14 @@
-import cytoscape, { Collection } from "cytoscape";
-//import fcose from "cytoscape-fcose";
-import { GraphViewOptions } from "../../propertyEditor/ui/graph/GraphView";
-import { ElementDefinition } from "cytoscape";
+import cytoscape from "cytoscape";
 import fcose from "cytoscape-fcose";
+import dblclick from "cytoscape-dblclick";
+import { GraphViewOptions } from "../../propertyEditor/ui/graph/GraphView";
+import { GraphEventController } from "../ui/EventController";
+import { eventBus } from "../../propertyEditor/global/EventBus";
+import { ElementDefinition } from "cytoscape";
 import * as layoutOps from "../design/gLayout";
 
 cytoscape.use(fcose);
+cytoscape.use(dblclick);
 
 // Bundles all changes to the Graph + Layout
 
@@ -58,6 +61,7 @@ const DEFAULT_OPTIONS: GraphViewOptions = {
 export class MainGraph {
     private readonly cy: any;
     private readonly $container: HTMLElement;
+    private hasFiredEvent: Boolean = false;
     
     constructor(
         model: ElementDefinition[],
@@ -70,8 +74,18 @@ export class MainGraph {
             ...DEFAULT_OPTIONS,
         });
         this.cy.$("edge").unselectify(); // Make edges immutable
+
+        const graphEventConroller = new GraphEventController(this.cy);
+        this.initEvents();
     };
 
+    private initEvents() {
+        eventBus.on(
+            "openItemPage", this.openItemPage
+        );
+    }
+
+    // Switch-Layout-Event
     public switchLayout = (option: string) => {
         console.log("switch Layout: ", option);
         switch (option) {
@@ -92,7 +106,6 @@ export class MainGraph {
         }
     };
 
-
     private toggleParentVisibility(show:Boolean) {
         const parents = this.cy.$(":parent");
         if(show) {
@@ -101,6 +114,22 @@ export class MainGraph {
             this.cy.$(":parent").toggleClass("hide", true);
         }
         //this.cy.elements().nodes().descendants().move({parent:null});
+    }
+
+    // Open-Item-Page-Event
+    public openItemPage = (target:any, timestamp:Date) => { //: type cy-node
+        if(!this.hasFiredEvent) {
+            console.log("dbclick on", target);
+            if(target.isNode()) {
+                window.open(target.data("id"), "_blank")?.focus();
+                this.hasFiredEvent = true;
+            }
+        } else this.hasFiredEvent = false;
+    };
+
+    private blockPageEvent(timestamp:Date){
+        // check if call has been made in the last 3 seconds
+
     }
 
 }

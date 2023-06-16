@@ -1,7 +1,7 @@
 import { ElementDefinition } from "cytoscape";
 import { GraphModel } from "../../propertyEditor/ui/graph/GraphModel";
 import { MainGraph } from "./MainGraph";
-import { MenuController } from "../ui/MenuController";
+import { MenuEventController } from "../ui/EventController";
 import { eventBus } from "../../propertyEditor/global/EventBus";
 
 // MainViz bundles all viz-tests
@@ -9,7 +9,7 @@ import { eventBus } from "../../propertyEditor/global/EventBus";
 export class MainViz {
     private mainGraph;
     private graphModel: GraphModel;
-    private menuController: MenuController;
+    private menuController: MenuEventController;
 
     constructor(elements:ElementDefinition[]) {
         this.graphModel = elements;
@@ -17,11 +17,13 @@ export class MainViz {
             this.graphModel,
             document.getElementById("app")!,
         );
-        this.menuController = new MenuController();
+        this.menuController = new MenuEventController();
 
+        // ---- EVENTS -------------------------------------
         eventBus.on(
             "layoutChange", this.mainGraph.switchLayout
-        )
+        );
+
     }
     
 }
