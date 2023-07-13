@@ -1,7 +1,6 @@
 import { ElementDefinition } from "cytoscape";
 import "./style.css";
 import { GraphViz } from "./vis/GraphViz";
-import { getElements } from "./data/DataManager";
 import CGBV from "./data/cgbv.json";
 import EIMI from "./data/eimi.json";
 
