@@ -2,24 +2,46 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="../../shared/icons/logo.svg" />
+    <link rel="icon" type="image/svg+xml" href="/src/global/icons/logo.svg" /> 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GraphIT</title>
+    <title>BA-Prototyp</title>
   </head>
+
   <body>
 
 
-    <!-- Side-Bar -->
-    <div id="sidebarBase" class="sidebarBase">
-      <div id="menuBtn"></div>
-      <div id="sidebar">
-        <div id="hotlist"></div>
-      </div>
-
+    <!-- A top-bar that bundels multiple menu icons: Left: sidebar, Right: -->
+    <div id="sidebar-container">
+      <div id="sidebar-icon"></div>
+      <div id="sidebar"></div>
+      <div id="graph-info" class="info-icon"></div>
     </div>
 
-    <div id="app"></div>
-    <script type="module" src="./main.ts"></script>
+    <div id="graph"></div>
+
+
+    <!-- For the view on the right side -->
+    <div id="view">
+
+      <div class="info">
+          <div id="node-icon"></div>
+          <div id="node-name">Knoten</div>
+          <!-- <div id="course-icon"></div> -->
+          <div id="course-name">in Kurs:</div>
+          <div id="resources"> Resourcen: 
+            <div id="resource-container"></div>
+          </div>
+      </div>
+
+      <div>Lernpfad:</div>
+      <div class="path" id="path"> </div> 
+      <div id="path-info" class="info-icon"></div>
+
+      <!-- <div id="eval">Eval</div> -->
+
+    </div>
+    <script type="module" src="/src/pages/visualisierung/main.ts"></script>
 
   </body>
+
 </html>

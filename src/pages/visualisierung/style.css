@@ -1,46 +1,262 @@
 /* maximize root, body and app */
 html,
-body,
-#app {
+body {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	padding: 0;
 	margin: 0;
-	/*outline: none;*/
+    display: inline-flex;
+    flex-direction: row;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-/* ---- SIDE BAR ---- */
+/* ----------------------------------------------------------------------------- */
 
-.sidebarBase {
-	z-index: 1;
+/* The main window containing the main graph view and a top-bar menu */
+
+/* The menu bar*/
+#sidebar-container {
+    /* flex-grow: 0; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: stretch;
+    /* padding: 10px; */
+    position: fixed;
+    height: 100%;
+    z-index: 1000;
 }
 
-#menuBtn {
-	content: url("../visTest/icons/menu-rounded.svg");
+#sidebar-icon {
+    display: block;
+    flex-grow: 0;
+    content: url("../visualisierung/global/icons/menu-rounded.svg");
 	width: 25px;
+    height: 25px;
+    order: 0;
+    padding: 10px;
+    cursor: pointer;
 }
 
 #sidebar {
-	height: 100%;
-	width: 25%;
-	display: none;
-	z-index: 1;
-	position: fixed;
-	background-color: white;
+    display: none;
+    flex-grow: 1;
+    order: 1;
+    width: 25px;
+    z-index: 100;
+    background-color: white;
 }
 
-#hotlist {
-	/*height: 100%;
-	width: inherit;
-	display: inherit;
-	background-color: inherit;*/
-	overflow: scroll;
-}
-
-.hotlist-item {
+/* container for hotlist*/
+.sidebar-items {
 	padding: 5px;
-	padding-left: 5px;
-	margin: 2px;
 	background-color: whitesmoke;
+	align-self: center;
+}
+
+    .sidebar-parents {
+        padding: 5px;
+        background-color: whitesmoke;
+        align-self: center;
+        /* display: inline-block; */
+        cursor: pointer;  
+    }
+
+        .sidebar-childs {
+            padding-left: 20px;
+            padding-bottom: 2px;
+            padding-top: 2px;
+            font-size: small;
+            background-color: white; 
+            cursor: pointer;
+        }
+
+        .highlight-childs {
+            padding-left: 20px;
+            padding-bottom: 2px;
+            padding-top: 2px;
+            font-size: small;
+            background-color: #3c3245;
+            color: white;
+            cursor: pointer;
+        }
+
+    .highlight-parents {
+        padding: 5px;
+        font-size: medium;
+        background-color: #3c3245;
+        color: white;
+    }
+
+#graph-info {
+    display: block;
+    flex-grow: 0;
+    order: 2;
+    align-self: flex-start;
+    cursor:help;
+    /* float: ; */
+}
+
+/* The main graph view */
+#graph {
+    width: auto;
+    height: 100%;
+    /* min-height: min-content; */
+    display: inline-block;
+    flex-grow: 1;
+    resize: horizontal;
+    overflow: hidden;
+    /* geht nicht, irgendwo, ist das width zu fest */
+}
+
+/* ----------------------------------------------------------------------------- */
+
+/* A multi purpose view on the left side of the screen */
+#view {
+    /* width: max-content; */
+    width: 35%;
+    height: 100%;
+    padding-right: 10px;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+/* A text field giving info about the selected node */
+.info {
+    flex-grow: 1;
+    display: grid;
+    /* display: inline-flex; */
+    margin-top: 10px;
+    grid-template-columns: 40px auto;
+    grid-auto-rows: minmax(10px, 20px);
+    height: max-content;
+    width: 100%;
+    z-index: 100;
+}
+
+/* Info for the node */
+    #node-icon {
+        content: url("../visualisierung/global/icons/node-course.svg");
+        grid-column: 1;
+        grid-row: 1 / 2;
+        width: 50px;
+        height: 50px;
+        /* align-content: center; */
+    }
+
+    #node-name {
+        grid-column: 2;
+        grid-row: 1;
+        margin-right: 5px;
+        height: 25px;
+        font-size: medium;
+    }
+
+    #course-name {
+        grid-column: 2;
+        grid-row: 2;
+        margin-left: 10px;
+        margin-top: 12px;
+        padding: 5px;
+        font-size: small;
+    }
+
+/* Displayes the text: Resources */
+    #resources {
+        margin-top: 20px;
+        margin-left: 5px;
+        grid-column: 2;
+        grid-row: 3;
+        padding-top: 10px;
+        height: fit-content;
+    }
+
+/* A container for the displayed resources */
+#resource-container {
+    display: flex;
+    flex-direction: column;
+    /* display: inline-flex; */
+    height: fit-content;
+    z-index: 10;
+}
+
+    /* Parent class for a Resource-item (icon+name) */
+    .resource-items {
+        display: flex;
+        flex-direction: row;
+        height: fit-content;
+        font-size: small;
+        font-weight: normal;
+        margin-left: 15px;
+        padding-bottom: 5px;
+        height: fit-content;
+    }
+
+        .resource-icon {
+            content: url("../visualisierung/global/icons/open.png"); /*oder: link*/
+            height: 15px;
+            width: 15px;
+            display: block;
+            flex-grow: 0;
+            padding: 3px;
+            cursor: pointer;
+        }
+
+        .resource-name {
+            display: block;
+            flex-grow: 1;
+            align-self: center;
+            padding: 3px;
+        }
+
+.info-icon {
+    content: url("../visualisierung/global/icons/info.svg");
+    width: 25px;
+    height: 25px;
+    opacity: 60%;
+    display: block;
+    align-self: self-end;
+    float: right;
+    margin: 10px;
+    flex-grow: 0;
+    cursor: help;
+}
+
+/* A box displaying a information for a section*/
+.info-box {
+    position: fixed;
+    top: 0; left: 0; bottom: 0; right: 0;
+    margin: auto;
+    width: fit-content;
+    height: fit-content;
+    box-shadow: 0 0 18px rgba(0, 0, 0, 0.9);
+    background-color: white;
+    padding: 10px;
+}
+
+.info-box-close {
+    content: url("../visualisierung/global/icons/close.png");
+    width: 15px;
+    height: 15px;
+}
+
+/* A graph field showing the learning graph of the selected node */
+.path {
+    display: block;
+    flex-grow: 2;
+    height: 40%; /*usually 50% -> if no eval*/
+    padding-bottom: 10px;
+    margin-bottom: 5%;
+    z-index: 0;
+    /* resize: horizontal;
+    overflow: auto; */
+}
+
+
+/* For the evaluation tasks and texts*/
+#eval {
+    height: 15%;
+    background-color: whitesmoke;
 }

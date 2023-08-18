@@ -1,4 +1,4 @@
-import cytoscape, { NodeDefinition } from "cytoscape";
+import { NodeDefinition } from "cytoscape";
 
 // Parent nodes for the courses depicted in the graph
 // Currently static
@@ -17,7 +17,17 @@ export const COURSES : NodeDefinition[] = [
         },
         classes: "course"
     },
-    { group: "nodes",
+
+    { group: "edges",
+    data: {
+        id: "eimi-cgbv",
+        source: "cgbv",
+        target: "eimi",
+        course: "true",
+        }
+    },
+
+    /*{ group: "nodes",
         data: {
             id: "math1",
             label: "Mathematik für Medieninformatik 1",
@@ -61,7 +71,7 @@ export const COURSES : NodeDefinition[] = [
         source: "cgbv",
         target: "oop",
         }
-    },
+    }, */
 
 ];
 
